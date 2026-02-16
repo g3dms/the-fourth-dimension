@@ -1,0 +1,116 @@
+/* Fonts */
+@font-face {font-family: basiic;src: url('https://files.catbox.moe/jtvuhg.ttf');}
+@font-face {font-family: jetbrains;src: url('https://files.catbox.moe/hyutal.ttf');}
+@font-face {font-family: microgamma;src: url('https://files.catbox.moe/vvg4n2.ttf');}
+@font-face {font-family: calsans;src: url('https://files.catbox.moe/tvj705.ttf');}
+@font-face {font-family: robotomono;src: url('https://files.catbox.moe/583egg.ttf');}
+@font-face {font-family: nunito;src: url('https://files.catbox.moe/505rkf.ttf');}
+@font-face {font-family: karla;src: url('https://files.catbox.moe/k151xd.ttf');}
+@font-face {font-family: eurostile;src: url('https://files.catbox.moe/pmmjpx.woff');}
+@font-face {font-family: mc;src: url('https://files.catbox.moe/sd80fu.ttf');}
+@font-face {font-family: vcr;src: url('https://files.catbox.moe/ks689m.ttf');}
+@font-face {font-family: pixellari;src: url('https://files.catbox.moe/6yk1u6.ttf');}
+@font-face {font-family: alagard;src: url('https://files.catbox.moe/h7d0sv.ttf');}
+@font-face {font-family: spongeboymebob;src: url('https://files.catbox.moe/kyqndv.ttf');}
+@font-face {font-family: amoria;src: url('https://files.catbox.moe/e89ntn.otf');}
+@font-face {font-family: coolveltica;src: url('https://files.catbox.moe/cu0145.otf');}
+@font-face {font-family: newromantics;src: url('https://files.catbox.moe/0u8u6s.TTF');}
+@font-face {font-family: angelicwar;src: url('https://files.catbox.moe/0hwgn4.ttf');}
+@font-face {font-family: shinybuttons;src: url('https://files.catbox.moe/x1m6eo.ttf');}
+@font-face {font-family: eg; src: url('https://files.catbox.moe/ae7or7.otf');}
+@font-face {font-family: bendabold; src: url('https://files.catbox.moe/jx4osv.otf');}
+@font-face {font-family: jack; src: url('https://files.catbox.moe/6ufqyx.ttf');}
+@font-face {font-family: vintageking; src: url('https://files.catbox.moe/llnpbb.ttf');}
+@font-face {font-family: boostplayer; src: url('https://files.catbox.moe/fosdd4.otf');}
+@font-face {font-family: evilempire; src: url('https://files.catbox.moe/ucsaab.otf');}
+@font-face {font-family: retrobritish; src: url('https://files.catbox.moe/100zjt.otf');}
+@font-face {font-family: marketdeco; src: url('https://files.catbox.moe/0v4j8k.ttf');}
+@font-face {font-family: gluper; src: url('https://files.catbox.moe/efoezk.ttf');}
+@font-face {font-family: fifties; src: url('https://files.catbox.moe/kfis61.ttf');}
+@font-face {font-family: deco; src: url('https://files.catbox.moe/901i6y.otf');}
+@font-face {font-family: nct; src: url('https://files.catbox.moe/rchko5.ttf');}
+@font-face {font-family: nct3d; src: url('https://files.catbox.moe/vg8f61.ttf');}
+@font-face {font-family: nct3d; src: url('https://files.catbox.moe/n1wzd4.ttf'); font-style: italic;}
+@font-face {font-family: nct; src: url('https://files.catbox.moe/iys4uw.ttf'); font-weight: bold;}
+@font-face {font-family: nct; src: url('https://files.catbox.moe/fzk7it.ttf'); font-style: italic; font-weight: bold;}
+@font-face {font-family: nctcond; src: url('https://files.catbox.moe/q9mrzs.ttf');}
+@font-face {font-family: nctcond; src: url('https://files.catbox.moe/9eeptz.ttf'); font-style: italic;}
+@font-face {font-family: nctexp; src: url('https://files.catbox.moe/18gyjk.ttf');}
+@font-face {font-family: nctexp; src: url('https://files.catbox.moe/pk2zwg.ttf'); font-style: italic;}
+@font-face {font-family: nctgr; src: url('https://files.catbox.moe/1hs67l.ttf');}
+@font-face {font-family: nctgr; src: url('https://files.catbox.moe/ourxn8.ttf'); font-style: italic;}
+@font-face {font-family: ncth; src: url('https://files.catbox.moe/rffe5e.ttf');}
+@font-face {font-family: ncth; src: url('https://files.catbox.moe/6o2mul.ttf'); font-style: italic;}
+@font-face {font-family: nct; src: url('https://files.catbox.moe/o23owt.ttf'); font-style: italic;}
+@font-face {font-family: nctla; src: url('https://files.catbox.moe/fd0hb2.ttf');}
+@font-face {font-family: nctla; src: url('https://files.catbox.moe/ihkhta.ttf'); font-style: italic;}
+
+body {
+    font-family: 'Comic Sans MS';
+    padding: 20px;
+    text-align: center;
+    background-color: #fff8f8;
+    color: #473825;
+}
+
+.filter-controls {
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff8f8;
+
+}
+
+#tagSearch {
+    padding: 0.5rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    font-family: 'Comic Sans MS';
+}
+
+.tag-btn {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: #ffd9d9;
+    color: #473825;
+    font-family: 'Comic Sans MS';
+}
+
+.tag-btn.active {
+    background: #473825;
+    color: #ffd9d9;
+}
+
+.font-card {
+    border: 3px solid #473825;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.font-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tags {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+

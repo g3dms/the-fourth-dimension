@@ -1,0 +1,38 @@
+Lobby (two doors)
+    Left door: correct
+        Corporate page (tsp facts)
+        employee handbook
+        productivity dashboard
+        terms of service
+    Right door: wrong
+        Delete narrator button "Nice try, Stanley."
+
+
+Office
+    computer (like bills computer)
+        > help
+        Commands
+        work (not found)
+        quit (life doesn't work that way)
+        stare_at_screen (ok)
+    Shelf
+
+After 30 seconds idle, auto-type: "Stanley wondered if his coworkers were ever coming back."
+
+Header: "Welcome to the Official Stanley Parable Shrine (Approved by The Committee)."
+
+Subtext: "This webpage complies with all narrative regulations. Please enjoy responsibly."
+
+Footer: "© 2024 Stanley Parable Fan Site #427. Unauthorized thoughts prohibited."
+
+A fake survey with radio buttons:
+
+"How satisfied are you with Stanley’s performance?"
+
+⚪ Very Satisfied
+
+⚪ Satisfied
+
+⚪ (No other options allowed)*
+
+Submit button does nothing but play a generic "thank you" jingle.

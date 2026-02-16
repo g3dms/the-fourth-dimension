@@ -1,0 +1,45 @@
+/* FONTS */
+@font-face {
+    font-family: det;
+    src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/DTM-Mono.otf');
+}
+
+@font-face {
+    font-family: sans;
+    src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/DTM-Sans.otf');
+}
+
+/* ELEMENT */
+body{
+    background-color: black;
+    color: white;
+    font-family: det;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+
+/* CLASS */
+.row {
+    display: flex;
+}
+
+.column {
+flex: 50%;
+}
+
+.intro{
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

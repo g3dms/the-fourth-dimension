@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="tsp.css">
+    <style>
+        body {
+            background-image: url('https://files.catbox.moe/ejzq29.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+    </style>
+    <script src="../../../autoplay.js"></script>
+
+    <script type="text/javascript">
+        message = "The End Is Never The End Is Never ";
+        function step() {
+            message = message.substr(1) + message.substr(0, 1);
+            document.title = message.substr(0, 30);
+        }
+    </script>
+</head>
+
+<body onload="setInterval(step,100)">
+    <audio loop autoplay>
+        <source src="https://files.catbox.moe/lgf1e1.mp3">
+    </audio>
+
+    <p id="subtitle">Wait, why is Stanley back in his office? Did he… walk backward? No, no, that's not how the story goes!</p>
+</body>
+
+</html>

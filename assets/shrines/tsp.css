@@ -1,0 +1,79 @@
+/* FONTS */
+@font-face{font-family: title; src: url('https://files.catbox.moe/t0jsxx.otf');}
+@font-face{font-family: title;src: url('https://files.catbox.moe/pnms1p.otf');font-style: italic;}
+@font-face{font-family: sub;src: url('https://files.catbox.moe/vifeuu.otf');}
+/* This font reminds me of Stanley, hee hee. */
+
+/* ELEMENT */
+
+body{
+    color: white;
+    background-color: #BDB397;
+    font-family: sub;
+}
+
+/* CLASS */
+.hl{
+    color: rgb(255, 225, 0);
+}
+
+.vCentre {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.fixed-image {
+    width: 300px;
+    height: 200px;
+    position: fixed; /* or 'absolute' */
+    top: 50px;
+    left: 50px;
+    object-fit: cover;
+    max-width: none;
+}
+
+/* ID */
+#subtitle{
+    font-family: sub;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.618);
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    z-index: 1000;
+    padding: 0.5rem;
+    font-weight: lighter;
+    left: 50%;          
+    transform: translateX(-50%);
+}
+
+#subtitle.has-more::after {
+    content: " ▼";
+    opacity: 0.7;
+    animation: fade-in-out 2s infinite;
+}
+
+#left{
+    width: 80px;
+    height: auto;
+    left: 455px;
+    top: 280px;
+}
+
+#right{
+    width: 85px;
+    height: auto;
+    left: 750px;
+    top: 280px;
+}
+
+
+/* OTHERS */
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    50% { opacity: 1; } 
+    100% { opacity: 0; }
+}

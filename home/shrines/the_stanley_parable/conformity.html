@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://db.onlinewebfonts.com/c/0209bfe594ed24b75ee2aac06529e4f9?family=Neue+Haas+Grotesk+Display+Pro+75+Bold" rel="stylesheet">
+        <link href="/assets/shrines/corp-main.css" rel="stylesheet">
+        <title>OFFICE CO.</title>
+        <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/c1p8qk.png">
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="https://files.catbox.moe/c1p8qk.png">
+                <h1>Office Co.</h1>
+            </div>
+            <h2>Where we pretend to work, and you pretend to care.</h2>
+
+            <nav>
+                <a href="#" onclick="loadPage('iframes/home.html')">Home</a>
+                <a href="#" onclick="loadPage('iframes/about.html')">About</a>
+                <a href="#" onclick="loadPage('iframes/tc.html')">Training & Careers</a>
+                <a href="#" onclick="loadPage('iframes/ps.html')">Products & Services</a>
+                <a href="#" onclick="loadPage('iframes/facilities.html')">Facilities</a>
+                <a href="#" onclick="loadPage('iframes/policies.html')">Policies</a>
+                <a href="#" onclick="loadPage('iframes/contact.html')">Contact Us</a>
+                <a href="lobby.html">Back</a>
+            </nav>
+
+            <div class="marquee">
+                <div>
+                    <span>BREAKING: New policy bans all non-beige office decor.</span>
+                    <span>REMINDER: Ventilation ducts are NOT for employee use.</span>
+                    <span>UPDATE: Elevator music upgraded to 20% more motivational.</span>
+                    <span>REMINDER: All pens must be checked out from HR. Unauthorized writing is a fireable offense.</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="status-bar">
+                <div class="ticker">
+                    Current productivity:<br>100%<br>(BASELINE ADJUSTED) 
+                </div>
+                <div class="ticker">
+                    Our Core Values<br>
+                    1. Obedience<br>
+                    2. Paperwork<br>
+                    3. Vague Reassurance
+                </div>
+                <div class="ticker">
+                    Total number of hours worked:<br>
+                    <img src="https://files.catbox.moe/gi2yya.gif">
+                </div>
+            </div>
+            <iframe id="content-iframe" src="iframes/home.html" onload="resizeIframe(this)" class="content-frame"></iframe>
+        </div>
+
+        <div id="footer">
+            <p>© 2025 Office Co. || A subsidiary of Narrative Control Inc.</p>
+            <p> Innovating Workplace Compliance Since ████</p>
+            <p><small>All choices are monitored. All dissent is logged.</small></p>
+        </div>
+
+        <script>
+            function loadPage(page) {
+              document.getElementById('content-iframe').src = page;
+            }
+
+            function resizeIframe(iframe) {
+                height = iframe.contentWindow.document.body.scrollHeight + 50
+                iframe.style.height = height + 'px';
+            }
+        </script>
+        
+
+    </body>
+</html>

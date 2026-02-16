@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margie Valentine</title>
+    <link rel="stylesheet" href="../../../assets/stories/trifecta-terra.css">
+</head>
+
+<body class="red fleshbound">
+    <div class="wiki-window">
+        <header class="wiki-header">
+            <h1 class="wiki-title">TerraWiki</h1>
+        </header>
+
+        <div class="wiki-content">
+            <!-- Infobox Column -->
+            <aside class="wiki-infobox-column">
+                <div class="infobox">
+                    <div class="infobox-title">Margie Valentine</div>
+
+                    <div class="image-tabs">
+                        <div class="image-tab active">Computer Head</div>
+                        <div class="image-tab">1st Form</div>
+                        <div class="image-tab">2nd Form</div>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="https://files.catbox.moe/fdb4tm.png" alt="Character" class="infobox-image">
+                    </div>
+
+                    <div class="infobox-quote">
+                        "Figure it out yourself."
+                    </div>
+
+                    <div class="infobox-section">
+                        <div class="infobox-row">
+                            <div class="infobox-label">Aliases</div>
+                            <div class="infobox-value">
+                                Doctor<br>
+                                Dr. Valentine<br>
+                                The Royal Architect<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Nicknames</div>
+                            <div class="infobox-value">
+                                Old Man (by C0G-1T0 and M3T-R)<br>
+                                My Architect (by C0G-1T0)<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Age</div>
+                            <div class="infobox-value">49</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Birthday</div>
+                            <div class="infobox-value">
+                                November 7, 2024<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Gender</div>
+                            <div class="infobox-value">
+                                "I don't care."
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Pronouns</div>
+                            <div class="infobox-value">Him / they</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Faction</div>
+                            <div class="infobox-value">Fleshbound</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Species</div>
+                            <div class="infobox-value">Human</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Occupation</div>
+                            <div class="infobox-value">
+                                The royal architect (former)
+                                Mechanic (current)
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Hobbies</div>
+                            <div class="infobox-value">
+                                Tinkering with broken tech<br>
+                                Drinking to forget<br>
+                                Writing unsent letters<br>
+                                Arguing with machines<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Likes</div>
+                            <div class="infobox-value">
+                                Black coffee<br>
+                                Sleeping<br>
+                                The way C0G-1T0 would say his name<br>
+                                Re-reading research notes<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Dislikes</div>
+                            <div class="infobox-value">
+                                C0G-1T0<br>
+                                Nostalgia<br>
+                                Being called 'father'<br>
+                                Bland food<br>
+                            </div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label"><a href="https://discordier.github.io/sam/">Voice</a></div>
+                            <div class="infobox-value">
+                                (VA name)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="infobox-section">
+                        <div class="infobox-row">
+                            <div class="infobox-label">Status</div>
+                            <div class="infobox-value">Active</div>
+                        </div>
+                        <div class="infobox-row">
+                            <div class="infobox-label">Origin</div>
+                            <div class="infobox-value">Terra Vitae</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Main Article Content -->
+            <main class="wiki-article">
+                <h1>Margie Valentine</h1>
+                <hr>
+                <p>Under construction</p>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.image-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs
+                this.parentNode.querySelectorAll('.image-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                // Add to clicked tab
+                this.classList.add('active');
+
+                // In a real implementation, change the image source here
+                // const img = this.closest('.infobox').querySelector('.infobox-image');
+                // img.src = 'new-image-' + this.textContent.toLowerCase() + '.jpg';
+            });
+        });
+    </script>
+</body>
+
+</html>

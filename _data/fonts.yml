@@ -1,0 +1,224 @@
+- name: "Courier New"
+  info: "Howard Kettler"
+  tags: ["monospace", "coding"]
+  css: "font-family: 'Courier New', monospace;"
+
+- name: "Basiic"
+  info: "cinni.net"
+  tags: ["pixel"]
+  css: "font-family: basiic"
+
+- name: "Jetbrains Mono"
+  info: "Philipp Nurullin and Konstantin Bulenkov"
+  tags: ["monospace", "coding", "open-source"]
+  css: "font-family: jetbrains"
+
+- name: "Microgamma"
+  info: "Aldo Novarese and Alessandro Butti"
+  tags: ["sans-serif", "display"]
+  css: "font-family: microgamma"
+
+- name: "Cal Sans"
+  info: "Mark Davis"
+  tags: ["sans-serif"]
+  css: "font-family: calsans"
+
+- name: "Roboto Mono"
+  info: "Christian Robertson"
+  tags: ["monospace", "coding"]
+  css: "font-family: robotomono"
+
+- name: "Nunito"
+  info: "Vernon Adams, Cyreal, Jacques Le Bailly"
+  tags: ["sans-serif", "cute"]
+  css: "font-family: robotomono"
+
+- name: "Karla"
+  info: "Jonny Pinhorn"
+  tags: ["sans-serif", "vintage"]
+  css: "font-family: karla"
+
+- name: "Eurostile"
+  info: "Jonny Pinhorn"
+  tags: ["sans-serif", "display"]
+  css: "font-family: eurostile"
+
+- name: "Minecraft"
+  info: "Craftron Gaming"
+  tags: ["pixel", "video-game"]
+  css: "font-family: mc"
+
+- name: "VCR OSD Mono"
+  info: "Riciery Leal"
+  tags: ["pixel"]
+  css: "font-family: vcr"
+
+- name: "Pixellari"
+  info: "Zacchary Dempsey-Plante"
+  tags: ["pixel"]
+  css: "font-family: pixellari"
+
+- name: "Alagard"
+  info: "Hewett Tsoi"
+  tags: ["pixel", "historical"]
+  css: "font-family: alagard"
+
+- name: "Spongeboy Me Bob"
+  info: "EyeOfTheLioness"
+  tags: ["cartoon", "cute"]
+  css: "font-family: spongeboymebob"
+
+- name: "Amoria"
+  info: "Fandi Kurniawan"
+  tags: ["retro", "fancy"]
+  css: "font-family: amoria"
+
+- name: "Coolveltica"
+  info: "Typodermic Fonts"
+  tags: ["sans-serif"]
+  css: "font-family: coolveltica"
+
+- name: "New Romantics"
+  info: "Fonts a Go-Go"
+  tags: ["distorted", "serif"]
+  css: "font-family: newromantics"
+
+- name: "Angelic War"
+  info: "Dirt2"
+  tags: ["serif", "fancy", "distorted"]
+  css: "font-family: angelicwar"
+
+- name: "Shinybuttons (use in 16px for buttons)"
+  info: "99fish on Tumblr"
+  tags: ["pixel", "cute"]
+  css: "font-family: shinybuttons"
+
+- name: "Egiziano"
+  info: "OPTIFONT"
+  tags: ["serif"]
+  css: "font-family: eg;"
+
+- name: "Benda Bold"
+  info: "Tomáš Brousil"
+  tags: ["script", "bold", "art-deco", "decorative"]
+  css: "font-family: bendabold;"
+
+- name: "Jack Armstrong"
+  info: "Nate Piekos"
+  tags: ["display", "gothic", "sans-serif"]
+  css: "font-family: jack;"
+
+- name: "Vintage King"
+  info: "A classic serif font with vintage poster style."
+  tags: ["serif", "vintage", "poster", "retro"]
+  css: "font-family: vintageking;"
+
+- name: "Boost Player"
+  info: "A heavy, rounded sans-serif with a sporty feel."
+  tags: ["sans-serif", "rounded", "heavy", "sporty"]
+  css: "font-family: boostplayer;"
+
+- name: "Evil Empire"
+  info: "A sharp, aggressive display font."
+  tags: ["display", "sharp", "aggressive", "decorative"]
+  css: "font-family: evilempire;"
+
+- name: "Retro British"
+  info: "A slab serif font reminiscent of vintage British posters."
+  tags: ["slab-serif", "vintage", "british", "retro"]
+  css: "font-family: retrobritish;"
+
+- name: "Market Deco"
+  info: "A clean, elegant sans-serif with strong Art Deco character."
+  tags: ["sans-serif", "art-deco", "elegant", "clean"]
+  css: "font-family: marketdeco;"
+
+- name: "Gluper"
+  info: "A playful, rounded display font."
+  tags: ["display", "rounded", "playful", "decorative"]
+  css: "font-family: gluper;"
+
+- name: "Fifties America"
+  info: "A retro script font evoking 1950s Americana."
+  tags: ["script", "retro", "1950s", "americana"]
+  css: "font-family: fifties;"
+
+- name: "Deco Lines"
+  info: "A geometric Art Deco font constructed from lines."
+  tags: ["art-deco", "geometric", "line-based", "decorative"]
+  css: "font-family: deco;"
+
+- name: "NCT Regular"
+  info: "The regular weight of the NCT sans-serif family."
+  tags: ["sans-serif", "regular", "clean"]
+  css: "font-family: nct;"
+
+- name: "NCT 3D"
+  info: "A 3D/extruded version of the NCT font family."
+  tags: ["sans-serif", "3d", "extruded", "display"]
+  css: "font-family: nct3d;"
+
+- name: "NCT Bold"
+  info: "The bold weight of the NCT sans-serif family."
+  tags: ["sans-serif", "bold", "strong"]
+  css: "font-family: nct; font-weight: bold;"
+
+- name: "NCT Bold Italic"
+  info: "The bold italic weight of the NCT sans-serif family."
+  tags: ["sans-serif", "bold", "italic", "strong"]
+  css: "font-family: nct; font-style: italic; font-weight: bold;"
+
+- name: "NCT Condensed"
+  info: "A condensed variant of the NCT sans-serif family."
+  tags: ["sans-serif", "condensed", "narrow"]
+  css: "font-family: nctcond;"
+
+- name: "NCT Condensed Italic"
+  info: "The italic style of the NCT Condensed font."
+  tags: ["sans-serif", "condensed", "italic", "narrow"]
+  css: "font-family: nctcond; font-style: italic;"
+
+- name: "NCT Expanded"
+  info: "An expanded/wide variant of the NCT sans-serif family."
+  tags: ["sans-serif", "expanded", "wide"]
+  css: "font-family: nctexp;"
+
+- name: "NCT Expanded Italic"
+  info: "The italic style of the NCT Expanded font."
+  tags: ["sans-serif", "expanded", "italic", "wide"]
+  css: "font-family: nctexp; font-style: italic;"
+
+- name: "NCT Grotesque"
+  info: "A grotesque style variant of the NCT family."
+  tags: ["sans-serif", "grotesque", "neutral"]
+  css: "font-family: nctgr;"
+
+- name: "NCT Grotesque Italic"
+  info: "The italic style of the NCT Grotesque font."
+  tags: ["sans-serif", "grotesque", "italic", "neutral"]
+  css: "font-family: nctgr; font-style: italic;"
+
+- name: "NCT Heavy"
+  info: "A heavy/black weight of the NCT sans-serif family."
+  tags: ["sans-serif", "heavy", "black", "strong"]
+  css: "font-family: ncth;"
+
+- name: "NCT Heavy Italic"
+  info: "The italic style of the NCT Heavy font."
+  tags: ["sans-serif", "heavy", "italic", "black"]
+  css: "font-family: ncth; font-style: italic;"
+
+- name: "NCT Italic"
+  info: "The standard italic style of the NCT font."
+  tags: ["sans-serif", "italic", "oblique"]
+  css: "font-family: nct; font-style: italic;"
+
+- name: "NCT Light"
+  info: "A light weight of the NCT sans-serif family."
+  tags: ["sans-serif", "light", "thin"]
+  css: "font-family: nctla;"
+
+- name: "NCT Light Italic"
+  info: "The italic style of the NCT Light font."
+  tags: ["sans-serif", "light", "italic", "thin"]
+  css: "font-family: nctla; font-style: italic;"

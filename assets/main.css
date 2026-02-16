@@ -1,0 +1,356 @@
+/* FONTS */
+@font-face {
+    font-family: aero;
+    src: url('https://files.catbox.moe/vl3zy3.ttf');
+}
+
+@font-face {
+    font-family: pixel;
+    src: url('https://cinni.net/fonts/basiic.ttf');
+}
+
+/* ELEMENTS */
+* {
+    cursor: url(https://file.garden/ZRW6VPKULjLI59VM/500gift/bow_cursor.png), auto;
+
+}
+
+h1 {
+    font-family: aero;
+    background: -webkit-linear-gradient(#48aaff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.01rem;
+    -webkit-text-stroke-color: #2979bf;
+    font-size: 6rem;
+}
+
+body {
+    background: linear-gradient(45deg, #ffffff, #a5d5ff, #ecfaff, #d0f6ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    text-align: center;
+    color: rgb(56, 56, 56);
+    font-family: pixel;
+}
+
+
+/* CLASSES */
+
+img .blue {
+    filter: sepia(100%) saturate(300%) brightness(85%) hue-rotate(175deg);
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+    z-index: 99;
+}
+
+.box {
+
+    border-radius: 1.5rem;
+    border-style: solid;
+    border-color: #c4c4c4;
+    border-width: 2px;
+
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.mainArea {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.45fr;
+}
+
+/* ID * /
+
+/* OTHER */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ID */
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* CRT */
+.crt::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 40%, rgba(0, 0, 0, 0.25) 40%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.wrap {
+    margin: 2rem auto;
+    height: 50rem;
+    width: 50rem;
+    overflow: auto;
+    border: 8px ridge var(--border);
+    border-radius: 30px 30px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    box-shadow: #833554a1 -3px 4px 9px -3px;
+}
+
+marquee {
+    width: 100%;
+    height: 5%;
+    border-bottom: 5px ridge var(--border);
+    box-shadow: inset #ffc0c0 0 0 6px;
+}
+
+.middle {
+    width: 100%;
+    height: 89%;
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+    box-shadow: inset white 0 0 4px 2px;
+    margin: 1rem;
+}
+
+footer {
+    width: 100%;
+    height: 7%;
+    border-top: 5px ridge var(--border);
+    box-shadow: inset #ffc0c0 0 0 6px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #6e5962;
+    padding-top: 8px;
+}
+
+.left {
+    width: 25%;
+    height: 100%;
+    border: 3px ridge #ffd8e9;
+    border-radius: 10px 10px 3px 3px;
+    padding: 3px;
+    margin: 1rem;
+}
+
+main {
+    width: 50%;
+    height: 100%;
+    border: 3px ridge #ffd8e9;
+    border-radius: 10px 10px 3px 3px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 1rem;
+}
+
+.divwrap {
+    width: 100%;
+    height: 14.7rem;
+    border: 2px ridge #a17989;
+    display: flex;
+    padding: 5px;
+    gap: 0.5rem;
+    border-radius: 3px;
+    color: #856371;
+    margin: 1rem;
+}
+
+.chat {
+    width: 60%;
+    height: 100%;
+    border: 2px ridge #f0bfd4;
+    box-shadow: inset #ffddeb 0 0 6px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.link {
+    width: 40%;
+    border: 2px ridge #f0bfd4;
+    box-shadow: inset #ffddeb 0 0 6px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+header {
+    width: 100%;
+    border: 2px ridge #9f7565;
+    border-radius: 3px 5px;
+    padding: 3px;
+    box-shadow: inset #ffddeb 0 0 6px;
+}
+
+header h1 {
+    margin-top: 8.6rem;
+    color: #9f7565;
+    font-size: 1.5em;
+}
+
+.intro_wrap {
+    width: 100%;
+    height: 15rem;
+    border: 2px ridge #9f7565;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    border: 2px ridge #f0bfd4;
+    box-shadow: inset #ffddeb 0 0 6px;
+    padding: 5px;
+    color: #856371;
+}
+
+.right {
+    width: 25%;
+    height: 100%;
+    border: 3px ridge #ffd8e9;
+    border-radius: 10px 10px 3px 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    gap: 0.5rem;
+    color: #856371;
+}
+
+.box1 {
+    width: 100%;
+    height: 10rem;
+    border: 2px ridge #f0bfd4;
+}
+
+.updates {
+    width: 100%;
+    height: 15rem;
+    border: 2px ridge #f0bfd4;
+}
+
+.box2 {
+    width: 100%;
+    height: 8.3rem;
+    border: 2px ridge #f0bfd4;
+}
+
+.ad {
+    width: 100%;
+    height: 6.9rem;
+    background-size: contain;
+}
+
+nav {
+    width: 100%;
+    height: 29rem;
+    border: 2px ridge #a17989;
+    border-radius: 13px 13px 3px 3px;
+    overflow: auto;
+}
+
+nav li {
+    width: 95%;
+    border: 1px solid #a17989;
+    height: 2rem;
+    margin: 3px auto;
+    padding: 1rem;
+    border-radius: 5px;
+    list-style-type: none;
+
+}
+
+p {
+    font-size: 1.3em;
+    color: #856371;
+}
+
+nav li::after {
+    top: -1.5rem;
+    left: 8.6rem;
+    position: relative;
+}
+
+.navtop {
+    width: 100%;
+    height: 2.5rem;
+    padding: 4px;
+    border-bottom: 1px solid gray;
+}
+
+.navdesc {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #6e5962;
+    border-radius: 7px 7px 5px 5px;
+    text-align: center;
+    padding-top: 5px;
+    color: #6e5962;
+    box-shadow: rgba(85, 36, 55, 0.144) 0px 1px 2px 0px, #e751061c 0px 1px 4px 0px inset;
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.cal_calendar {
+    border: 1px solid #8f657a;
+    padding: 1px;
+    width: 100%;
+    margin: 0.6rem auto 0 auto;
+    height: 191px;
+    color: #83586e;
+    border-radius: 5px;
+}
+
+.cal_calendar th {
+    border: 1px solid #874a17c9;
+    width: 36px;
+    font-size: 0.69em;
+    border-radius: 3px;
+    color: #83586e;
+    box-shadow: inset #ffcee8 0 0 4px 1px;
+}
+
+.cal_calendar td {
+    border: 1px solid #fa94c785;
+    text-align: center;
+    font-size: 0.8em;
+    border-radius: 3px;
+    box-shadow: inset white 0 3px 3px, inset #ff7cb945 0 0 2px 1px;
+}
+
+.cal_today {
+    color: #ff7cb9;
+    font-weight: bold;
+}
+
+.cal_days_bef_aft {
+    color: #5a779e;
+}
