@@ -1,9 +1,13 @@
-name: Deploy to neocities
+name: Deploy to Neocities
 
 on:
   push:
     branches:
-      - main 
+      - main
+
+env:
+  node-version: 22
+  FORCE_COLOR: 2
 
 concurrency:
   group: deploy-to-neocities
@@ -12,11 +16,12 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v1
-        with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: false
-          dist_dir: public
+    - uses: actions/checkout@v3
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v1
+      with:
+        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+        cleanup: true
+        dist_dir: public
