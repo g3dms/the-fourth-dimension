@@ -40,7 +40,12 @@ include:
   - assets/main.css
   
 exclude:
-  - assets/main.scss        
+  - assets/main.scss    
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore    
 
 collections:
   blog:                  
