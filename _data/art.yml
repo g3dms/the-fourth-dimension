@@ -1,0 +1,23 @@
+- name: Settei Dreams
+  url: https://setteidreams.net/settei/
+  desc: The holy grail of anime storyboards, concept art, and model sheets
+
+- name: Magma
+  url: https://magma.com/
+  desc: Multiplayer art, essentially
+
+- name: Blockbench Web
+  url: https://web.blockbench.net
+  desc: Web version of Blockbench, a 3D software
+
+- name: Sakugabooru
+  url: https://www.sakugabooru.com/post
+  desc: An animation archive
+
+- name: bitfontmaker2
+  url: https://www.pentacom.jp/pentacom/bitfontmaker2/
+  desc: Bitmap font maker
+
+- name: referenceangle
+  url: http://referenceangle.com
+  desc: Head references from custom angles

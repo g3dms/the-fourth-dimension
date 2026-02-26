@@ -1,0 +1,11 @@
+- name: Code Maven
+  url: https://www.crunchzilla.com/code-maven
+  desc: Interactive JavaScript tutorial for beginners
+
+- name: Eloquent JavaScript
+  url: https://eloquentjavascript.net
+  desc: Modern JavaScript book - comprehensive guide to the language
+
+- name: You Don't Know JS
+  url: https://github.com/getify/You-Dont-Know-JS
+  desc: Book series diving deep into the core mechanisms of JavaScript

@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign sorted = site.data.libraries | sort: "name" %}
+    {% for item in sorted %}
+    <tr>
+      <td><a href="{{ item.url }}">{{ item.name }}</a></td>
+      <td>{{ item.desc }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,83 @@
+- name: makewordart
+  url: https://www.makewordart.com
+  desc: Microsoft Word Art generator
+
+- name: skinmc
+  url: https://skinmc.net/achievement
+  desc: Minecraft achievement generator
+
+- name: cooltext
+  url: https://cooltext.com/Logo-Design-Burning
+  desc: Text graphics generator (used this way back in my Scratch days in 5th grade)
+
+- name: makesweet
+  url: https://makesweet.com
+  desc: 3D graphics generator, e.g. heart locket, flag
+
+- name: 3dgifmaker
+  url: https://www.3dgifmaker.com/360Spin
+  desc: Create 3D gifs from images
+
+- name: websetsbylynn
+  url: https://websetsbylynn.neocities.org
+  desc: Button generator
+
+- name: websetsbylynn
+  url: https://websetsbylynn.neocities.org/glitter-text-generator/
+  desc: Glitter text generator
+
+- name: blinkies.cafe
+  url: https://blinkies.cafe
+  desc: Blinkie generator
+
+- name: p5generator
+  url: http://www.p5generator.com
+  desc: Persona 5 dialogue generator
+
+- name: perchance
+  url: https://perchance.org/welcome
+  desc: Random text generator
+
+- name: petpet
+  url: https://benisland.neocities.org/petpet/
+  desc: Let your images get pet
+
+- name: undertale text box generator
+  url: https://www.demirramon.com/generators/undertale_text_box_generator
+  desc: Create custom static/animated Undertale textboxes
+
+- name: Dither Me This
+  url: https://doodad.dev/dither-me-this/
+  desc: Dither your photos
+
+- name: Dither It
+  url: https://ditherit.com
+  desc: Another photo-dithering website
+
+- name: 3Dtext2gif
+  url: https://3dtext2gif.com
+  desc: Make 3D text GIFs
+
+- name: flamingtext
+  url: https://www.flamingtext.com
+  desc: Text graphics generator
+
+- name: glitchyimage
+  url: https://glitchyimage.com
+  desc: Add glitches to your images
+
+- name: deepfriedmemes
+  url: https://deepfriedmemes.com
+  desc: Deep fry your images like old meme photos
+
+- name: The Death Generator
+  url: https://deathgenerator.com/#gallery
+  desc: Create images of message screens from retro 90's games
+
+- name: typed text gif maker
+  url: https://willkessler.github.io/typed-text-gif-maker/
+  desc: Creates typewriter animation gifs for text
+
+- name: pookatoo
+  url: https://pookatoo.com
+  desc: Animated gothic text generator

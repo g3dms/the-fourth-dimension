@@ -1,0 +1,11 @@
+- name: grime
+  url: https://rentry.org/grime
+  desc: Rentry for lots of links
+
+- name: terrorlinks
+  url: https://rentry.co/terrorlinks
+  desc: Rentry for more links!
+
+- name: roses-resources
+  url: https://rentry.co/roses-resources
+  desc: Rentry for more...links...

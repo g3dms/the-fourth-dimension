@@ -1,0 +1,207 @@
+- name: W3 Schools
+  url: https://www.w3schools.com/html/default.asp
+  desc: The coding bible
+
+- name: ishimori
+  url: https://ishimori.crd.co/#codes
+  desc: Carrd for codes
+
+- name: whimsical
+  url: https://whimsical.crd.co/#codes
+  desc: Carrd for text, scrollbox, image, hover, tap effect codes
+
+- name: pochi
+  url: https://pochi.crd.co
+  desc: Carrd for various text and image animations, scrollboxes, music players
+
+- name: templaterr
+  url: https://templaterr.neocities.org
+  desc: Simple website layouts
+
+- name: developer.mozilla.org
+  url: https://developer.mozilla.org/en-US/
+  desc: HTML/CSS/JS documentation
+
+- name: useragentman
+  url: https://www.useragentman.com/matrix/
+  desc: CSS 3D matrix, warping images into 3D
+
+- name: kovart
+  url: https://kovart.github.io/dashed-border-generator/
+  desc: CSS dashed border generator
+
+- name: shecodes
+  url: https://www.shecodes.io/css_generators/css-transform-generator
+  desc: Visualised CSS transformations
+
+- name: bennettfeely
+  url: https://bennettfeely.com/clippy/
+  desc: CSS clip-path maker (masking images)
+
+- name: goblin-heart.net
+  url: https://goblin-heart.net/sadgrl/projects/layout-builder/
+  desc: Layout builder
+
+- name: wikitable
+  url: https://limegreen.neocities.org/templates/wikitable/wikitable
+  desc: Wikipedia/Fandom layout
+
+- name: rarebit
+  url: https://rarebit.neocities.org
+  desc: Webcomic layout
+
+- name: loveberry
+  url: https://loveberry.neoweb.org
+  desc: Codes for borders and text
+
+- name: RV's free Javascript/DHTML effects
+  url: https://www.mf2fm.com/rv/
+  desc: Assortment of different javascript effects for mouse, text, and graphics
+
+- name: css-generators.com
+  url: https://css-generators.com
+  desc: Wide assortment of CSS generators
+
+- name: webgradients
+  url: https://webgradients.com
+  desc: Linear CSS background gradients
+
+- name: htmlcheatsheet
+  url: https://htmlcheatsheet.com
+  desc: HTML, CSS, JS, PHP cheatsheets
+
+- name: scripted
+  url: https://scripted.neocities.org
+  desc: Assortment of codes for images, music player, cursors, backgrounds, scrollboxes, text, chatboxes, and others
+
+- name: dokode
+  url: https://dokode.moe/blogs/howto-winamp
+  desc: Embedding Winamp tutorial
+
+- name: cubic-bezier
+  url: https://cubic-bezier.com/#0,.99,1,.02
+  desc: CSS cubic-bezier generator
+
+- name: designyourway
+  url: https://www.designyourway.net/blog/yes-you-can-actually-make-these-text-effects-in-css/
+  desc: CSS text effects
+
+- name: cssgridgarden
+  url: https://cssgridgarden.com
+  desc: Learn about CSS grids by tending a garden
+
+- name: Custom scrollbar maker
+  url: https://codepen.io/stephenpaton-tech/full/JjRvGmY
+  desc: Custom CSS scrollbar maker
+
+- name: css triangle generator
+  url: https://www.cssportal.com/css-triangle-generator/
+  desc: Custom CSS triangle generator
+
+- name: Interneting is hard
+  url: https://internetingishard.netlify.app
+  desc: Learn the basics of web development
+
+- name: 7 Deadly Neocities Sins
+  url: https://wrender.neocities.org/designsins
+  desc: General web design and UI tips
+
+- name: floras
+  url: https://floras.neocities.org/#codes
+  desc: Text codes, image codes, scrollboxes, cursors, scrollbars, backgrounds, menus, music players, and others
+
+- name: hauntedmansions
+  url: https://hauntedmansions.carrd.co/#codes
+  desc: Carrd with so many codes
+
+- name: codes
+  url: https://codes.crd.co
+  desc: Carrd of an assortment of CSS snippets and codes
+
+- name: dracslaura's pastebin
+  url: https://pastebin.com/u/dracslaura
+  desc: More codes...
+
+- name: animista
+  url: https://animista.net/play/basic/scale-up
+  desc: CSS animations
+
+- name: LearnTheWeb Markdown & YAML Cheatsheet
+  url: https://learntheweb.courses/topics/markdown-yaml-cheat-sheet/#yaml
+  desc: Markdown & YAML syntax, useful for static-site builders like Jekyll
+
+- name: Learn X in Y Minutes
+  url: https://learnxinyminutes.com/yaml/
+  desc: Another YAML cheatsheet
+
+- name: Jekyll Cheatsheet
+  url: https://www.ihsantopaloglu.com/Jekyll-Markdown-Cheat-Sheet/
+  desc: Cheatsheet specifically for Jekyll's Markdown
+
+- name: Lissa Explains
+  url: https://www.lissaexplains.com/basics.shtml
+  desc: Beginner-friendly web development explainations and resources
+
+- name: mf2fm
+  url: https://www.mf2fm.com/rv/
+  desc: F2U mouse effects, text effects and graphic effects scripts for websites
+
+- name: bradwoods
+  url: https://layout.bradwoods.io
+  desc: CSS layouts
+
+- name: colordesigner.io
+  url: https://colordesigner.io
+  desc: Tools for everything about colour, gradient generator, colour palette from image, etc.
+
+- name: A Beginner's Guide to HTML and CSS
+  url: https://webguide.neocities.org
+  desc: A basic starter guide for using HTML and CSS for Neocities
+
+- name: The Cave of Dragonflies’ HTML Guide
+  url: https://www.dragonflycave.com/html-guide/
+  desc: HTML guide
+
+- name: Flexbox Froggy
+  url: https://flexboxfroggy.com
+  desc: Learn CSS flexbox by playing a game
+
+- name: David V. Kimball
+  url: https://davidvkimball.com/?utm_source=david.qa&utm_medium=direct&utm_campaign=redirect
+  desc: Web development resources and tutorials
+
+- name: HTML Dog
+  url: https://www.htmldog.com
+  desc: Web development tutorials for HTML, CSS, and JavaScript
+
+- name: HTML For People
+  url: https://htmlforpeople.com
+  desc: Beginner-friendly HTML tutorials
+
+- name: HTML.com
+  url: https://html.com
+  desc: Comprehensive HTML guides and resources
+
+- name: Interactive Guide to Grid
+  url: https://www.joshwcomeau.com/css/interactive-guide-to-grid/#introduction
+  desc: Josh Comeau's interactive CSS grid tutorial
+
+- name: Shannon's Web Lab
+  url: https://web.pixelshannon.com/make/
+  desc: Web design resources and tutorials
+
+- name: Introduction to the Web Revival
+  url: https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival
+  desc: MelonKing's guide to the web revival movement
+
+- name: Computer Lab Organisation
+  url: https://anemptyblissbeyondthisworld.neocities.org/computer_lab/organisation
+  desc: Web organisation tips and resources
+
+- name: Shark Coder
+  url: https://web.archive.org/web/20250118075939/https://sharkcoder.com/
+  desc: Web development tutorials and tools (archived)
+
+- name: W3C Style Examples
+  url: https://www.w3.org/Style/Examples/011/firstcss
+  desc: W3C's first CSS example tutorial

@@ -1,0 +1,99 @@
+- name: Everything I Do When Hosting a Website
+  url: https://blog.basementcommunity.com/everything-i-do-when-hosting-a-website/
+  desc: Basement Community's comprehensive hosting guide
+
+- name: VPS 101
+  url: https://rai.so/vps101-renting-a-slice-of-a-computer-on-the-internet/
+  desc: Guide to renting a VPS and self-hosting
+
+- name: Gentle Guide to Self-Hosting
+  url: https://knhash.in/gentle-guide-to-self-hosting/
+  desc: Beginner-friendly self-hosting tutorial
+
+- name: Self-Hosting Guide
+  url: https://ophanimkei.com/you/selfhosting
+  desc: Personal guide to self-hosting websites
+
+- name: Namecheap
+  url: https://www.namecheap.com
+  desc: Domain registrar and hosting provider
+
+- name: Hostinger
+  url: https://www.hostinger.com
+  desc: Affordable web hosting provider
+
+- name: Porkbun
+  url: https://porkbun.com
+  desc: Domain registrar with simple pricing
+
+- name: Hosting Resources
+  url: https://kalechips.net/stuff/hosting
+  desc: Collection of hosting resources and tips
+
+- name: Free Hosts List
+  url: https://web.pixelshannon.com/freehosts/
+  desc: Shannon's curated list of free hosting services
+
+- name: Codeberg Pages
+  url: https://codeberg.page
+  desc: Free static site hosting for Codeberg repositories
+
+- name: HelioHost
+  url: https://heliohost.org
+  desc: Free hosting with cPanel and PHP/MySQL support
+
+- name: GitHub Pages
+  url: https://docs.github.com/en/pages
+  desc: Free static site hosting from GitHub repositories
+
+- name: Hotglue
+  url: https://hotglue.me
+  desc: Visual website builder and hosting
+
+- name: Ichi.city
+  url: https://ichi.city
+  desc: Creative web hosting and community platform
+
+- name: InfinityFree
+  url: https://www.infinityfree.com
+  desc: Free hosting with PHP and MySQL
+
+- name: Marigold Town
+  url: https://marigold.town
+  desc: Personal website hosting and community
+
+- name: Mmm.page
+  url: https://mmm.page
+  desc: Simple, visual website builder
+
+- name: Neocities
+  url: https://neocities.org
+  desc: Free static web hosting for creative sites
+
+- name: Nekoweb
+  url: https://nekoweb.org
+  desc: Free web hosting with a focus on creative sites
+
+- name: Netlify
+  url: https://www.netlify.com
+  desc: Professional static site hosting with CI/CD
+
+- name: Slashpage
+  url: https://slashpage.com/slashpage
+  desc: Simple landing page builder
+
+- name: SourceHut Pages
+  url: https://srht.site
+  desc: Free static site hosting for SourceHut users
+
+- name: Straw.page
+  url: https://straw.page
+  desc: Minimalist website builder
+
+- name: Web 1.0 Hosting
+  url: https://web1.0hosting.net
+  desc: Retro-styled web hosting service
+
+- name: W3Schools Spaces
+  url: https://www.w3schools.com/spaces/index.php
+  desc: W3Schools' hosting platform for learning and projects

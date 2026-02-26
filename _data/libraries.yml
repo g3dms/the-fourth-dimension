@@ -1,0 +1,15 @@
+- name: system.css
+  url: https://sakofchit.github.io/system.css/
+  desc: 90's Mac OS library
+
+- name: 7.css
+  url: https://khang-nd.github.io/7.css/
+  desc: Windows 7 library
+
+- name: XP.css
+  url: https://botoxparty.github.io/XP.css/
+  desc: Windows XP library
+
+- name: 98.css
+  url: https://jdan.github.io/98.css/
+  desc: Windows 98 library

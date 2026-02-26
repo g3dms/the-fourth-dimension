@@ -1,0 +1,19 @@
+- name: jsfxr
+  url: https://sfxr.me
+  desc: 8-bit sfx generator
+
+- name: voicegenerator.io
+  url: https://voicegenerator.io
+  desc: TTS
+
+- name: dova-s.jp
+  url: https://dova-s.jp
+  desc: Big catalogue of Royalty-free music
+
+- name: sounds-resource
+  url: https://www.sounds-resource.com
+  desc: Sound effects from many games on different consoles/platforms
+
+- name: Beepbox
+  url: https://www.beepbox.co/
+  desc: Create and share instrumental melodies

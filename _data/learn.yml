@@ -1,0 +1,39 @@
+- name: Physicsclassroom
+  url: https://www.physicsclassroom.com/Physics-Tutorial/1-D-Kinematics
+  desc: Resources and lessons for learning Physics
+
+- name: lifeprint
+  url: https://www.lifeprint.com/
+  desc: Videos on learning ASL
+
+- name: fromfiction
+  url: https://fromfiction.tumblr.com/post/687944739868344320/what-does-someone-mean-when-they-say-i-kin-that
+  desc: Explanations of kinning, face claims, comfort characters, introjects, etc.
+
+- name: Practice Python
+  url: https://www.practicepython.org
+  desc: Beginner Python exercises
+
+- name: Freecodecamp
+  url: https://www.freecodecamp.org/learn
+  desc: Learn various coding languages and concepts, for free!
+
+- name: Roadmap
+  url: https://roadmap.sh
+  desc: Roadmaps for different coding languages, computer science related careers, etc.
+
+- name: Arabic desert sky
+  url: https://arabic.desert-sky.net/index.html
+  desc: Resources and information to learn standard Arabic and the Egyptian dialect
+
+- name: neosprites
+  url: https://www.tumblr.com/neosprites/770165723594211328/digital-stamp-making-tutorial
+  desc: Digital stamp making tutorial
+
+- name: Project-based learning
+  url: https://github.com/practical-tutorials/project-based-learning
+  desc: Projects to learn coding for various coding languages
+
+- name: Tricks/effects to make the game more alive/interactive
+  url: https://lemmasoft.renai.us/forums/viewtopic.php?t=60662
+  desc: Forum post on ideas to make a visual novel more interactive

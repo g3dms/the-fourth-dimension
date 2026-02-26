@@ -1,0 +1,59 @@
+- name: annas-archive
+  url: https://annas-archive.org/
+  desc: Search engine for Z-Lib, DuXiu, etc. One of the best websites for archivists.
+
+- name: sonicretro
+  url: https://info.sonicretro.org
+  desc: All things Sonic the Hedgehog
+
+- name: The Stanley Parable Transcript
+  url: https://docs.google.com/document/d/1TpuT39JKP_MUsJ8n7wz26f6JPbUR97ozS6Y-ZEd0m74/edit?tab=t.0
+  desc: All of the Narrator's dialogue from The Stanley Parable Ultra Deluxe
+
+- name: Undertale Alarm Clock
+  url: https://undertale.com/alarmclock/
+  desc: Extra canon content for Undertale characters. The Toriel + Flowey ones hit hard.
+
+- name: hushbugger
+  url: https://hushbugger.github.io/drdia1/
+  desc: The entire Deltarune Chapter 1 transcript
+
+- name: skins.webamp
+  url: https://skins.webamp.org
+  desc: A catalogue of webamp skins
+
+- name: spriters-resource
+  url: https://www.spriters-resource.com/
+  desc: Spritesheets from many games on different consoles/platforms
+
+- name: models-resource
+  url: https://www.models-resource.com
+  desc: Models from many games on different consoles/platforms
+
+- name: textures-resource
+  url: https://www.textures-resource.com
+  desc: Textures from many games on different consoles/platforms
+
+- name: trace.moe
+  url: https://trace.moe
+  desc: Find sources from anime screenshots
+
+- name: Free DND campaigns
+  url: https://www.dndbeyond.com/forums/dungeons-dragons-discussion/dungeon-masters-only/43718-list-of-free-dnd-campaigns
+  desc: A list of free DND campaigns and content
+
+- name: sci-hub
+  url: https://sci-hub.se
+  desc: Archive of scientific journals and articles
+
+- name: lib-gen
+  url: https://libgen.is
+  desc: Archive of journal articles, academic and general-interest books, comics and magazines
+
+- name: SNS Sega
+  url: https://sns.sega.jp/sp/#paper
+  desc: SEGA printables and paper crafts
+
+- name: gamesfashionarchive
+  url: https://gamesfashionarchive.net/viewer/
+  desc: 3D models of clothes of characters from games like Genshin and Nier Automata

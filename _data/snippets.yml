@@ -1,0 +1,31 @@
+- name: gifypet
+  url: https://gifypet.neocities.org
+  desc: Website pet
+
+- name: tamanotchi
+  url: https://tamanotchi.world
+  desc: Another website pet
+
+- name: webneko.net
+  url: https://webneko.net
+  desc: Cat that follows your mouse
+
+- name: pollcode
+  url: https://pollcode.com
+  desc: Create polls
+
+- name: dantendo dsi
+  url: https://layouts.spacehey.com/layout?id=85996#/
+  desc: Nintendo DS snippet
+
+- name: WebAmp
+  url: https://codepen.io/sadness97/pen/RwKbNWW
+  desc: Custom WinAmp
+
+- name: hover.css
+  url: https://ianlunn.github.io/Hover/
+  desc: CSS hover animation snippets
+
+- name: websiteout
+  url: https://www.websiteout.net/counter.php
+  desc: Website counters

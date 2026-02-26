@@ -1,0 +1,63 @@
+- name: ezgif
+  url: https://ezgif.com
+  desc: GIF resizer, trimmer, cropper, generator from video
+
+- name: atabook.org
+  url: https://atabook.org
+  desc: Create guestbooks
+
+- name: meyerweb
+  url: https://meyerweb.com/eric/tools/color-blend/#::1:hex
+  desc: Colour blender
+
+- name: cnvmp3
+  url: https://cnvmp3.com/v7
+  desc: Youtube to mp3/mp4
+
+- name: catbox.moe
+  url: https://catbox.moe
+  desc: My favourite file hosting website
+
+- name: filegarden
+  url: https://filegarden.com/
+  desc: Another good file hosting website, I use it for larger files / GIFs (catbox.moe has a 20 MB size limit for GIFs)
+
+- name: bulkimagecrop
+  url: https://bulkimagecrop.com
+  desc: ...bulk crop images
+
+- name: upng
+  url: http://upng.photopea.com
+  desc: Shrink images
+
+- name: online video cutter
+  url: https://online-video-cutter.com/crop-video
+  desc: Video cropper
+
+- name: online image editor
+  url: https://www.online-image-editor.com
+  desc: Honestly idk what it does /s
+
+- name: splitter
+  url: https://toolxox.com/splitter.php
+  desc: Splits images for rentrys and other
+
+- name: textcolorizer
+  url: https://www.stuffbydavid.com/textcolorizer
+  desc: Choose a gradient between 2 colours and you'll get HTML code for it
+
+- name: gtmetrix
+  url: https://gtmetrix.com
+  desc: Check your website's speed and optimisation
+
+- name: patorjk
+  url: https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+  desc: Turn text into ASCII art
+
+- name: safebooru
+  url: https://safebooru.org
+  desc: Search engine for anime photos
+
+- name: realtimecolors
+  url: https://www.realtimecolors.com/?colors=050315-fbfbfe-2f27ce-dedcff-433bff&fonts=Inter-Inter
+  desc: Visualise colours and fonts on a websit

@@ -8,7 +8,7 @@ layout: default
 
 (just a dump of all important links, I'm still deciding on the theme of the main page ;-;)
 
-**Current status**: Working on font hoard, Sonic shrine
+**Current status**: Working on main page
 
 ## Blogs & Journals
 Language notebook
@@ -20,31 +20,31 @@ Personal blog
 Dream journal
 
 ## Stories
-<a href="stories/list.html">My stories & OCs</a>
+<a href="stories/list.html">My stories & OCs (SUPER UNDER CONSTRUCTION)</a>
 
 ## Shrine directory
-<a href="shrines/persona/home.html">Persona 5</a>
+<a href="shrines/persona/home.html">Persona 5 (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="shrines/deltarune/ENTER.html">Deltarune (DELTARUNE TOMORROW!!! /ref)</a>
+<a href="shrines/deltarune/ENTER.html">Deltarune (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="https://all-seeing-eye.neocities.org/">Gravity Falls (my other Neocities site)</a>
+<a href="https://all-seeing-eye.neocities.org/">Gravity Falls (my other Neocities site, on indefinite hiatus)</a>
 
-<a href="shrines/the_stanley_parable/lobby.html">The Stanley Parable</a>
+<a href="shrines/the_stanley_parable/lobby.html">The Stanley Parable (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="shrines/sonic/greenhills.html">Sonic</a>
+<a href="shrines/sonic/greenhills.html">Sonic (SUPER UNDER CONSTRUCTION)</a>
 
 ## Resources & Hoards
 <a href="resources-hoards/resources.html">Resources and links</a>
 
 [Font hoard](resources-hoards/fonts.html)
 
-Moodboards
+<!-- Moodboards -->
 
-Kaomoji + Symbol hoard
+<!-- Kaomoji + Symbol hoard -->
 
-[Sensory hoard](resources-hoards/sensory.html)
+<!-- [Sensory hoard (SUPER UNDER CONSTRUCTION)](resources-hoards/sensory.html) -->
 
-Life hack hoard
+<!-- Life hack hoard -->
 
 ### Top media (cannot survive a day without thinking of these)
 

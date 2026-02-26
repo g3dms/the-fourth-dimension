@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}enjoy your stay...</title>
+    <link rel="stylesheet" href="{{ '../assets/main.css' | relative_url }}">
+</head>
+
+<body>
+    <div class="window">
+        <div class="window-inner">
+
+            <div class="title-bar">
+                <div style="flex:1;"></div>
+                <div class="window-dots">
+                    <span class="dot"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+            </div>
+
+            <div class="hero" aria-label="abstract red circles"></div>
+
+            <div class="toolbar">
+                <div class="nav-group">
+                    <button class="icon-btn circle" aria-label="back"><span class="arrow-left"></span></button>
+                    <button class="icon-btn circle" aria-label="forward"><span class="arrow-right"></span></button>
+                </div>
+
+                <div class="address-bar">
+                    <span class="address-field">𐔌՞. .՞𐦯 {{ page.url | default: 'https://the-fourth-dimension.neocities.org' | remove: 'index.html' }}</span>
+                </div>
+
+                <button class="icon-btn circle" aria-label="mail">✉</button>
+                <button class="icon-btn circle" aria-label="ping">⦿</button>
+                <button class="icon-btn circle" aria-label="share">⇪</button>
+            </div>
+
+            <div class="content">
+                {% if page.layout == "default" and content %}
+                    {{ content }}
+                {% else %}
+                    <!-- Page content will go here -->
+                    {{ content }}
+                {% endif %}
+            </div>
+
+            <div class="bottom-bar">
+                <button class="nav-btn">HOME</button>
+                <button class="nav-btn">ABOUT ME</button>
+                <button class="nav-btn">SITEMAP</button>
+                <button class="nav-btn">FIND ME!</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>𝄞⨾𓍢ִ໋ Lee || Apr 24, 2024 - Until the end of time ദ്ദി◝ ⩊ ◜.ᐟ</p>
+    </div>
+</body>
+
+</html>
