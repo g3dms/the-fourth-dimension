@@ -1,45 +1,270 @@
 ---
 layout: main
 title: Home
+background-img: 'https://files.catbox.moe/t8kdme.jpg'
+marquee: "Dreams. Fantasies. Ideas. Where do they go when life brings you tumbling back to the now? One by one, they
+drift away to the cosmic Imagisphere. From the atomic, to the galactic, they dance and they whirl, unfettered by worry
+and concern. The heavenly ballet of the Wonderplane. And sometimes, this dance creates something astonishing. Out pops a
+transcendental dreamverse, a remarkable place where the real meets the fantastic. And this vast expanse of imagination
+has a name... They call it... LittleBigPlanet."
+
 ---
 
 <div class="content-grid">
     <section class="nav-panel">
         <div class="panel-header">
-            <span>NAVIGATION</span>
+            <span>NOW PLAYING...</span>
             <span style="opacity:0.6;">◀ ▶</span>
         </div>
+
         <div class="nav-items">
             <div class="cd">
-                <img src="https://files.catbox.moe/jr2lc0.png" alt="spinning cd">
+                <!-- <img src="https://files.catbox.moe/jr2lc0.png" alt="spinning cd"> -->
+                <img src="https://files.catbox.moe/0ya9am.jpeg">
             </div>
-            
-            <div class="nav-row"><span>Personal Blog</span><span class="time">1:32</span></div>
-            <div class="nav-row"><span>Coding Notebook</span><span class="time">1:32</span></div>
-            <div class="nav-row"><span>Language Notebook</span><span class="time">1:32</span></div>
-            <div class="nav-row"><span>My Stories & OCs</span><span class="time">1:32</span></div>
-            <div class="nav-row"><span>Font Hoard</span><span class="time">1:32</span></div>
-            <div class="nav-row"><span>Resources</span><span class="time">1:32</span></div>
+
+            <div class="music-player">
+                <div class="player-controls">
+                    <button class="play-pause-btn" id="playPauseBtn">▶</button>
+                    <div class="track-info">
+                        <span class="track-name">Sleepyhead</span>
+                        <span class="track-name" style="opacity: 0.7;">Passion Pit</span>
+
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <audio id="audioPlayer" src="https://files.catbox.moe/mak8ln.mp3"></audio>
+            </div>
+
+            <div class="nav-row"><span>Personal Blog</span><span class="time">1:23</span></div>
+            <div class="nav-row"><span>Coding Notebook</span><span class="time">1:11</span></div>
+            <div class="nav-row"><span>Language Notebook</span><span class="time">4:20</span></div>
+            <a href="shrines/home.html">
+                <div class="nav-row"><span>Shrines</span><span class="time">6:03</span></div>
+            </a>
+            <a href="stories/list.html">
+                <div class="nav-row"><span>My Stories & OCs</span><span class="time">6:09</span></div>
+            </a>
+            <a href="resources-hoards/fonts.html">
+                <div class="nav-row"><span>Font Hoard</span><span class="time">6:07</span></div>
+            </a>
+            <a href="resources-hoards/resources.html">
+                <div class="nav-row"><span>Resources</span><span class="time">1:32</span></div>
+            </a>
         </div>
     </section>
 
-    <section class="right-stack">
-        <div class="card">
+    <!-- MIDDLE COLUMN -->
+    <section class="middle-column">
+        <!-- MIDDLE TOP - Welcome Message -->
+        <div class="card welcome-card" style="text-align:center;align-items:center;">
             <div class="card-title">
-                <span class="title-badge">MAIN PAGE UNDER CONSTRUCTION</span>
+                <h1 class="title-badge">WELCOME TO THE... HUH?</h1>
             </div>
             <div class="prose">
-                <p>Visit <a href="maiin.html">here</a> for the old page!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore reprehenderit
-                    nobis nemo sed sit nam ipsam, velit ut quos assumenda amet a, repellat optio tenetur
-                    impedit necessitatibus nulla ullam illum consectetur veritatis magnam, vel et.
-                    Ratione dignissimos quidem reprehenderit tempora? Obcaecati voluptas, quo quod
-                    nesciunt quae nulla aliquam voluptates natus?</p>
+                <p>You're not supposed to be here! Oh, well, since you're here anyway, feel free to look around...</p>
             </div>
         </div>
 
-        <div class="card">
-            <!-- Empty card for now -->
+        <!-- MIDDLE TOP-MIDDLE - Thin Marquee for Stamps/Buttons -->
+        <div class="buttons-n-blinkers">
+            <div>
+                <img src="https://files.catbox.moe/t9w048.gif">
+                <img src="https://files.catbox.moe/y0ql6t.gif">
+                <img src="https://files.catbox.moe/tm9ho7.gif">
+                <img src="https://files.catbox.moe/apcoje.gif">
+                <img src="https://files.catbox.moe/xjn4ii.gif">
+                <img src="https://files.catbox.moe/bf7w72.gif">
+                <img src="https://files.catbox.moe/t6ojh2.gif">
+                <img src="https://files.catbox.moe/vzbmb7.gif">
+                <img src="https://files.catbox.moe/lsgagx.gif">
+                <img src="https://files.catbox.moe/72nsga.gif">
+                <img src="https://files.catbox.moe/kqif01.gif">
+                <img src="https://files.catbox.moe/f3kkap.gif">
+                <img src="https://files.catbox.moe/qptkbt.gif">
+                <img src="https://files.catbox.moe/q1a6op.gif">
+                <img src="https://files.catbox.moe/tjdmd1.gif">
+                <img src="https://files.catbox.moe/cz8z45.gifv">
+                <img src="https://files.catbox.moe/dzr38h.gif">
+                <img src="https://files.catbox.moe/taos03.gif">
+                <img src="https://files.catbox.moe/1ukgr7.gif">
+                <img src="https://files.catbox.moe/8utbvd.gif">
+                <img src="https://files.catbox.moe/7sdym9.gif">
+                <img src="https://files.catbox.moe/y62ol3.gifv">
+                <img src="https://files.catbox.moe/5sdf3i.GIF">
+                <img src="https://files.catbox.moe/pp5j5v.gif">
+                <img src="https://files.catbox.moe/cm1u21.gif">
+                <img src="https://files.catbox.moe/svoful.gif">
+                <img src="https://files.catbox.moe/gvgxik.gif">
+                <img src="https://files.catbox.moe/r4lem2.gif">
+                <img src="https://files.catbox.moe/ui5vl0.gif">
+                <img src="https://files.catbox.moe/ycmhxk.gif">
+                <img src="https://files.catbox.moe/zoiw40.gif">
+                <img src="https://files.catbox.moe/2x3zrb.gif">
+                <img src="https://files.catbox.moe/lwtxfy.gif">
+                <img src="https://files.catbox.moe/qceuro.gif">
+                <img src="https://files.catbox.moe/m50o7j.gif">
+                <img src="https://files.catbox.moe/yh3jy8.gif">
+                <img src="https://files.catbox.moe/b48t6a.gif">
+                <img src="https://files.catbox.moe/tmi01k.gif">
+                <img src="https://files.catbox.moe/cftpni.gif">
+                <img src="https://files.catbox.moe/hk0d40.gif">
+                <img src="https://files.catbox.moe/ix03ok.gif">
+                <img src="https://files.catbox.moe/nj5c5x.gif">
+                <img src="https://files.catbox.moe/vusjy1.gif">
+                <img src="https://files.catbox.moe/neamka.gif">
+                <img src="https://files.catbox.moe/qx6yox.gif">
+                <img src="https://files.catbox.moe/ug1smr.gif">
+                <img src="https://files.catbox.moe/5ou0xk.gif">
+                <img src="https://files.catbox.moe/0a2t9e.gif">
+                <img src="https://files.catbox.moe/l29gji.webp">
+                <img src="https://files.catbox.moe/6fwtxc.webp">
+                <img src="https://files.catbox.moe/17bu1x.webp">
+                <img src="https://files.catbox.moe/gkow5o.gif">
+            </div>
+        </div>
+
+        <div class="card welcome-card">
+            <div class="card-title">
+                <span class="title-badge">WHAT IS THIS?!</span>
+            </div>
+            <div class="prose">
+                <p>HII!</p><br>
+                
+                <p>I'm Lee. This is my little corner of the Internet. I've claimed it. <img src="https://files.catbox.moe/lehtnx.gif" style="filter: none;"></p><br>
+                <p style="text-decoration: underline;">This main page is still under construction, look at <a href="maiin.html">the old main page (click me)</a> if you want to look around.</p><br>
+                <p>Jokes aside, this is my forever-project, aimed to teach myself HTML, CSS, and JS, and archive all of my interests in the process! I have hoards, shrines, my blog, and a few notebooks.</p><br>
+                <p>If you wanna reach out, whether that be about a bug, help with web design, or talk about similar interests, go all for it! If you look below, there's a page full of contact links.</p><br>
+                <p>Have a nice day!</p>
+            </div>
+        </div>
+
+        <div class="buttons-n-blinkers slow">
+            <div>
+                <img src="https://files.catbox.moe/arivmo.gif">
+                <img src="https://files.catbox.moe/urjdcg.gif">
+                <img src="https://files.catbox.moe/2td2hy.jpg">
+                <img src="https://files.catbox.moe/i6jrbi.png">
+                <img src="https://files.catbox.moe/y060mv.gif">
+                <img src="https://files.catbox.moe/4593pd.jpg">
+                <img src="https://files.catbox.moe/yilz8h.gif">
+                <img src="https://files.catbox.moe/q6691f.gif">
+                <img src="https://files.catbox.moe/rdtsc8.gif">
+                <img src="https://files.catbox.moe/y5ytl1.gif">
+                <img src="https://files.catbox.moe/uyp4u9.png">
+                <img src="https://files.catbox.moe/v8e7b2.png">
+                <img src="https://files.catbox.moe/bfwgas.png">
+                <img src="https://files.catbox.moe/3990x6.png">
+                <img src="https://files.catbox.moe/qilx39.png">
+                <img src="https://files.catbox.moe/svw8nq.png">
+                <img src="https://files.catbox.moe/g913uk.png">
+                <img src="https://files.catbox.moe/z20i41.png">
+                <img src="https://files.catbox.moe/91eb15.gif">
+                <img src="https://files.catbox.moe/vsmmyt.gif">
+                <img src="https://files.catbox.moe/qcc0hv.webp">
+                <img src="https://files.catbox.moe/lb59m6.jpg">
+                <img src="https://files.catbox.moe/vo34qz.pnj">
+                <img src="https://files.catbox.moe/dh99dc.webp">
+                <img src="https://files.catbox.moe/14slud.webp">
+                <img src="https://files.catbox.moe/esasm4.webp">
+                <img src="https://files.catbox.moe/efx5e1.webp">
+                <img src="https://files.catbox.moe/nnn0pp.webp">
+                <img src="https://files.catbox.moe/wju0jt.webp">
+                <img src="https://files.catbox.moe/uibzvq.webp">
+                <img src="https://files.catbox.moe/q0ts4p.png">
+                <img src="https://files.catbox.moe/dnhydj.jpg">
+                <img src="https://files.catbox.moe/kxtiun.png">
+                <img src="https://files.catbox.moe/p3qv4r.webp">
+                <img src="https://files.catbox.moe/1mmwbd.jpg">
+                <img src="https://files.catbox.moe/lwolce.webp">
+                <img src="https://files.catbox.moe/rkv2lo.webp">
+                <img src="https://files.catbox.moe/h8g28f.webp">
+                <img src="https://files.catbox.moe/m0iqvm.gif">
+                <img src="https://files.catbox.moe/381jjm.png">
+                <img src="https://files.catbox.moe/w41q9g.png">
+                <img src="https://files.catbox.moe/fco0uq.gif">
+            </div>
+        </div>
+
+        <div class="split-row">
+            <!-- LEFT - Featured Character (hover popup) -->
+            <div class="split-left">
+                <div class="card feature-card" id="featured-character">
+                    <div class="card-title">
+                        <span class="title-badge">FEATURED CHARACTER</span>
+                    </div>
+                    <div class="character-container">
+                        <img src="https://files.catbox.moe/placeholder.png" alt="character" class="character-img">
+                        <div class="character-name">Character Name</div>
+                        <div class="character-popup">
+                            <p>Character description goes here! This appears on hover.</p>
+                            <p>More details about this character.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT - Featured Picture -->
+            <div class="split-right">
+                <div class="card feature-card">
+                    <div class="card-title">
+                        <span class="title-badge">FEATURED PICTURE</span>
+                    </div>
+                    <div class="featured-image-container">
+                        <img src="https://files.catbox.moe/placeholder.jpg" alt="featured" class="featured-img">
+                        <p class="image-caption">Caption for this image goes here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RIGHT COLUMN -->
+    <section class="right-column">
+        <!-- RIGHT TOP - To Do List -->
+        <div class="card todo-card">
+            <div class="card-title">
+                <span class="title-badge">TO DO</span>
+            </div>
+            <div class="todo-list">
+                <div class="todo-item">Add featured character, featured photo</div>
+                <div class="todo-item">Add more stamps to marquee</div>
+                <div class="todo-item">Work on about me page</div>
+                <div class="todo-item">Think of something for the placeholder panel</div>
+            </div>
+        </div>
+
+        <!-- RIGHT MIDDLE - Update Log -->
+        <div class="card update-card">
+            <div class="card-title">
+                <span class="title-badge">UPDATE LOG</span>
+            </div>
+            <div class="update-list">
+                <div class="update-item"><span class="update-date">04/03/2026:</span> Added small welcome message and intro in main page.</div>
+                <div class="update-item"><span class="update-date">02/03/2026:</span> Added music player, red tint, marquees,
+                    blinkies, stamps, to-do list, update log, credits page. Re-formatted sitemap, about me, main.</div>
+                <div class="update-item"><span class="update-date">??/??/????:</span> Something happened within this time...</div>
+                <div class="update-item"><span class="update-date">04/24/2024:</span> Launched the-fourth-dimension</div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT BOTTOM - Placeholder -->
+        <div class="card placeholder-card">
+            <div class="card-title">
+                <span class="title-badge">PLACEHOLDER</span>
+            </div>
+            <div class="prose">
+                <p>This space is waiting for something cool...</p>
+                <p>Coming soon!!!!!</p>
+            </div>
         </div>
     </section>
 </div>

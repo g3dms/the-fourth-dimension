@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>{% if page.title %}{{ page.title }} · {% endif %}enjoy your stay...</title>
     <link rel="stylesheet" href="{{ '../assets/main.css' | relative_url }}">
+    <style>
+        .hero {
+            background-image: url('{{ page.background-img | relative_url }}');
+        }
+    </style>
 </head>
 
 <body>
@@ -21,37 +26,55 @@
                 </div>
             </div>
 
-            <div class="hero" aria-label="abstract red circles"></div>
+            <div class="hero"></div>
+
+            <marquee>
+                {{ page.marquee }}
+            </marquee>
 
             <div class="toolbar">
                 <div class="nav-group">
-                    <button class="icon-btn circle" aria-label="back"><span class="arrow-left"></span></button>
-                    <button class="icon-btn circle" aria-label="forward"><span class="arrow-right"></span></button>
+                    <button class="icon-btn circle" aria-label="back"><span class="arrow-left">◀</span></button>
+                    <button class="icon-btn circle" aria-label="forward"><span class="arrow-right">▶</span></button>
                 </div>
 
                 <div class="address-bar">
-                    <span class="address-field">𐔌՞. .՞𐦯 {{ page.url | default: 'https://the-fourth-dimension.neocities.org' | remove: 'index.html' }}</span>
+                    <span class="address-field">𐔌՞. .՞𐦯 {{ page.url | default:
+                        'https://the-fourth-dimension.neocities.org' | remove: 'index.html' }}</span>
                 </div>
 
-                <button class="icon-btn circle" aria-label="mail">✉</button>
-                <button class="icon-btn circle" aria-label="ping">⦿</button>
-                <button class="icon-btn circle" aria-label="share">⇪</button>
+                <audio id="sound1" preload="auto">
+                    <source src="https://files.catbox.moe/qgreil.mp3">
+                </audio>
+                <audio id="sound2" preload="auto">
+                    <source src="https://files.catbox.moe/mttkez.mp3">
+                </audio>
+                <audio id="sound3" preload="auto">
+                    <source src="https://files.catbox.moe/spgxwi.mp3">
+                </audio>
+
+
+                <button class="icon-btn circle" aria-label="mail" onclick="document.getElementById('sound1').play()">✉</button>
+                <button class="icon-btn circle" aria-label="ping" onclick="document.getElementById('sound2').play()">⦿</button>
+                <button class="icon-btn circle" aria-label="share" onclick="document.getElementById('sound3').play()">⇪</button>
+
             </div>
 
             <div class="content">
                 {% if page.layout == "default" and content %}
-                    {{ content }}
+                {{ content }}
                 {% else %}
-                    <!-- Page content will go here -->
-                    {{ content }}
+                <!-- Page content will go here -->
+                {{ content }}
                 {% endif %}
             </div>
 
             <div class="bottom-bar">
-                <button class="nav-btn">HOME</button>
-                <button class="nav-btn">ABOUT ME</button>
-                <button class="nav-btn">SITEMAP</button>
-                <button class="nav-btn">FIND ME!</button>
+                <a href="{{ '../home/main.html' | relative_url }}"><button class="nav-btn">HOME</button></a>
+                <a href="{{ '../home/aboutme.html' | relative_url }}"><button class="nav-btn">ABOUT ME</button></a>
+                <a href="{{ '../home/sitemap.html' | relative_url }}"><button class="nav-btn">SITEMAP</button></a>
+                <a href="{{ '../home/contact.html' | relative_url }}"><button class="nav-btn">FIND ME!</button></a>
+                <a href="{{ '../home/credits.html' | relative_url }}"><button class="nav-btn">CREDITZ</button></a>
             </div>
 
         </div>
@@ -59,6 +82,76 @@
     <div class="footer">
         <p>𝄞⨾𓍢ִ໋ Lee || Apr 24, 2024 - Until the end of time ദ്ദി◝ ⩊ ◜.ᐟ</p>
     </div>
+
+    <script type="text/javascript" src="{{ '../assets/marquee.js' | relative_url }}"></script>
+    <script>
+    // Simple music player
+    const audio = document.getElementById('audioPlayer');
+    const playBtn = document.getElementById('playPauseBtn');
+    const progressFill = document.getElementById('progressFill');
+    const currentTimeSpan = document.getElementById('currentTime');
+    const durationSpan = document.getElementById('duration');
+    const progressBar = document.getElementById('progressBar');
+
+    // Set your audio file here
+    audio.src = 'https://files.catbox.moe/mak8ln.mp3'; // REPLACE WITH YOUR ACTUAL AUDIO FILE
+
+    // Format time (seconds to MM:SS)
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // Play/Pause toggle
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = '⏸';
+            playBtn.classList.add('playing');
+        } else {
+            audio.pause();
+            playBtn.textContent = '▶';
+            playBtn.classList.remove('playing');
+        }
+    });
+
+    // Update progress bar and time
+    audio.addEventListener('timeupdate', () => {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressFill.style.width = `${progress}%`;
+        currentTimeSpan.textContent = formatTime(audio.currentTime);
+    });
+
+    // Set duration when loaded
+    audio.addEventListener('loadedmetadata', () => {
+        durationSpan.textContent = formatTime(audio.duration);
+    });
+
+    // Click on progress bar to seek
+    progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const seekTime = (clickX / width) * audio.duration;
+        audio.currentTime = seekTime;
+    });
+
+    // When audio ends
+    audio.addEventListener('ended', () => {
+        playBtn.textContent = '▶';
+        playBtn.classList.remove('playing');
+        progressFill.style.width = '0%';
+        currentTimeSpan.textContent = '0:00';
+    });
+
+    // Handle errors
+    audio.addEventListener('error', () => {
+        console.log('Audio file not found or unsupported');
+        trackName.textContent = 'No audio file';
+    });
+</script>
 </body>
 
 </html>
