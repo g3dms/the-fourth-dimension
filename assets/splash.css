@@ -1,0 +1,24 @@
+/* FONTS */
+
+/* ELEMENTS */
+h2{
+    font-size: 48px;
+}
+
+li{
+    font-size: 27px;
+}
+
+/* CLASS */
+.container {
+    display: grid;
+    place-items: center; /* Shorthand for align + justify */
+    height: 80vh;
+}
+
+.splash{
+    width: 60%;
+}
+/* ID */
+
+/* MARQUEE */

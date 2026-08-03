@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIUJUTSUS&#39;S ART SHRINE :: 1996 - 2026</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --win-bg: #c0c0c0;
+            --win-blue: #000080;
+            --win-blue-light: #1084d0;
+            --win-teal: #008080;
+            --win-border-light: #ffffff;
+            --win-border-shadow: #808080;
+            --win-border-dark: #000000;
+            
+            --text-dark: #000000;
+            --text-light: #ffffff;
+            --link-blue: #0000ff;
+            --link-visited: #800080;
+            
+            --font-pixel: 'VT323', monospace;
+            --font-retro: 'Press Start 2P', monospace;
+            --font-sys: 'Tahoma', 'MS Sans Serif', Geneva, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--win-teal);
+            background-image: 
+                radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0);
+            background-size: 16px 16px;
+            font-family: var(--font-sys);
+            font-size: 12px;
+            color: var(--text-dark);
+            padding: 12px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Windows 95 3D Frame Utilities */
+        .win-box {
+            background: var(--win-bg);
+            border: 2px solid;
+            border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
+            box-shadow: 1px 1px 0px var(--win-border-dark);
+            padding: 3px;
+        }
+
+        .win-box-inset {
+            background: #ffffff;
+            border: 2px solid;
+            border-color: var(--win-border-shadow) var(--win-border-light) var(--win-border-light) var(--win-border-shadow);
+            padding: 6px;
+        }
+
+        .win-titlebar {
+            background: linear-gradient(90deg, var(--win-blue), var(--win-blue-light));
+            color: var(--text-light);
+            font-weight: bold;
+            font-family: var(--font-sys);
+            font-size: 12px;
+            padding: 3px 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .win-titlebar-controls {
+            display: flex;
+            gap: 2px;
+        }
+
+        .win-title-btn {
+            width: 16px;
+            height: 14px;
+            background: var(--win-bg);
+            border: 1px solid;
+            border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
+            font-size: 9px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .win-title-btn:active {
+            border-color: var(--win-border-dark) var(--win-border-light) var(--win-border-light) var(--win-border-dark);
+        }
+
+        /* Buttons */
+        .win-btn {
+            background: var(--win-bg);
+            border: 2px solid;
+            border-color: var(--win-border-light) var(--win-border-dark) var(--win-border-dark) var(--win-border-light);
+            font-family: var(--font-sys);
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .win-btn:active, .win-btn.active {
+            border-color: var(--win-border-dark) var(--win-border-light) var(--win-border-light) var(--win-border-dark);
+            background: #b5b5b5;
+            padding: 5px 9px 3px 11px;
+        }
+
+        .win-btn-emerald {
+            background: #008000;
+            color: #ffffff;
+            border-color: #80ff80 #004000 #004000 #80ff80;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Header Navigation */
+        .site-header {
+            margin-bottom: 12px;
+        }
+
+        .nav-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            padding: 6px;
+            background: var(--win-bg);
+            border-bottom: 2px solid var(--win-border-shadow);
+        }
+
+        /* Marquee Ticker */
+        .retro-marquee {
+            background: #000000;
+            color: #00ff00;
+            font-family: var(--font-pixel);
+            font-size: 18px;
+            padding: 4px;
+            border: 2px solid;
+            border-color: var(--win-border-shadow) var(--win-border-light) var(--win-border-light) var(--win-border-shadow);
+            margin-bottom: 12px;
+        }
+
+        /* Search & Filter Bar */
+        .filter-panel {
+            margin-bottom: 16px;
+        }
+
+        .filter-grid-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .win-input, .win-select {
+            background: #ffffff;
+            border: 2px solid;
+            border-color: var(--win-border-shadow) var(--win-border-light) var(--win-border-light) var(--win-border-shadow);
+            padding: 4px 6px;
+            font-family: var(--font-sys);
+            font-size: 12px;
+            outline: none;
+        }
+
+        .win-input:focus, .win-select:focus {
+            background: #ffffe0;
+        }
+
+        /* Tag Pills */
+        .pill-container {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            padding-top: 6px;
+            border-top: 1px dashed var(--win-border-shadow);
+        }
+
+        .tag-btn {
+            font-family: var(--font-sys);
+            font-size: 10px;
+            padding: 2px 6px;
+            background: #e0e0e0;
+            border: 1px solid #808080;
+            cursor: pointer;
+        }
+
+        .tag-btn.active {
+            background: var(--win-blue);
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Artwork Grid */
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 12px;
+        }
+
+        .art-card {
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .art-card:hover {
+            transform: translate(-1px, -1px);
+        }
+
+        .art-img-box {
+            aspect-ratio: 4 / 5;
+            background: #000000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+            border-color: var(--win-border-shadow) var(--win-border-light) var(--win-border-light) var(--win-border-shadow);
+            position: relative;
+        }
+
+        .art-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: crisp-edges;
+        }
+
+        .year-badge-90s {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: #ff0055;
+            color: #ffffff;
+            font-family: var(--font-pixel);
+            font-size: 16px;
+            padding: 1px 6px;
+            border: 1px solid #ffffff;
+            box-shadow: 1px 1px 0px #000000;
+        }
+
+        .art-info-box {
+            padding: 6px;
+            background: var(--win-bg);
+        }
+
+        .art-card-title {
+            font-weight: bold;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--win-blue);
+        }
+
+        /* Detail View Layout */
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        @media (min-width: 800px) {
+            .detail-grid {
+                grid-template-columns: 7fr 5fr;
+            }
+        }
+
+        .detail-img-container {
+            background: #000000;
+            border: 2px solid;
+            border-color: var(--win-border-shadow) var(--win-border-light) var(--win-border-light) var(--win-border-shadow);
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 350px;
+        }
+
+        .detail-img-container img {
+            max-width: 100%;
+            max-height: 70vh;
+            border: 1px solid #ffffff;
+        }
+
+        /* Cards 3-Column Layout */
+        .cards-3col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        /* Page Views */
+        .view-section {
+            display: none;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        /* Retro Badges & Hit Counter */
+        .retro-counter {
+            font-family: var(--font-pixel);
+            font-size: 20px;
+            background: #000000;
+            color: #ff0000;
+            padding: 2px 8px;
+            border: 1px solid #808080;
+            letter-spacing: 2px;
+        }
+
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            padding: 12px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Footer */
+        .site-footer {
+            margin-top: auto;
+            padding-top: 16px;
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0%; }
+        }
+
+        .artwork-detail-window {
+        max-width: 800px;
+        margin: 20px auto;
+        }
+
+        .artwork-image-frame {
+        background: #000;
+        border: 2px inset #dfdfdf;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .artwork-detail-img {
+        max-width: 100%;
+        max-height: 70vh;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        }
+
+        .win95-inset-box {
+        border: 2px inset #dfdfdf;
+        background-color: #ffffff;
+        }
+
+        .win95-tag {
+        display: inline-block;
+        background: #c0c0c0;
+        border: 1px solid #808080;
+        padding: 2px 6px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+        font-family: 'VT323', monospace;
+        }
+
+        .nav-toolbar {
+        display: flex;
+        gap: 6px;
+        background: #c0c0c0;
+        padding: 6px;
+        border-bottom: 2px solid #808080;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        }
+
+        /* Win95 Retro Buttons */
+        .win-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        background: #c0c0c0;
+        color: #000;
+        text-decoration: none;
+        font-family: 'MS Sans Serif', Tahoma, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-right: 2px solid #000;
+        border-bottom: 2px solid #000;
+        box-shadow: 1px 1px 0 #808080;
+        cursor: pointer;
+        }
+
+        .win-btn:active,
+        .win-btn.active {
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        background: #e0e0e0;
+        box-shadow: inset 1px 1px 0 #808080;
+        }
+
+        /* Window Content Panels */
+        .win-content {
+        background: #c0c0c0;
+        padding: 15px;
+        }
+
+        .win-inset {
+        background: #fff;
+        border: 2px inset #dfdfdf;
+        padding: 15px;
+        margin-top: 10px;
+        }
+
+        /* Tables for Rates & Terms */
+        .win-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background: #fff;
+        }
+
+        .win-table th, .win-table td {
+        border: 1px solid #808080;
+        padding: 8px;
+        font-size: 12px;
+        text-align: left;
+        }
+
+        .win-table th {
+        background: #000080;
+        color: #fff;
+        font-weight: bold;
+        }
+
+        /* Status Badges */
+        .badge-allowed {
+        background: #d4edda;
+        color: #155724;
+        padding: 2px 6px;
+        border: 1px solid #c3e6cb;
+        font-weight: bold;
+        }
+
+        .badge-banned {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 2px 6px;
+        border: 1px solid #f5c6cb;
+        font-weight: bold;
+        }
+
+        .win-content .win-inset {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .win-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: transparent; 
+            font-size: 12px;
+        }
+
+        .win-content div[style*="background: #fafafa"] {
+            background: transparent !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header win-box">
+            <div class="win-titlebar">
+                <span><i class="fa-solid fa-paintbrush"></i> C:\GIUJUTSUS\ARCHIVE\2016_2026.EXE</span>
+                <div class="win-titlebar-controls">
+                    <div class="win-title-btn">_</div>
+                    <div class="win-title-btn">□</div>
+                    <div class="win-title-btn" style="color: red;">X</div>
+                </div>
+            </div>
+
+            <div class="nav-toolbar">
+                <a href="/home/art/gallery/" class="win-btn ">
+                    <i class="fa-solid fa-floppy-disk"></i> Archive
+                </a>
+                <a href="/home/art/gifts/" class="win-btn ">
+                    <i class="fa-solid fa-gift" style="color: #ff00aa;"></i> Fanart & Gifts
+                </a>
+                <a href="/home/art/commissions/" class="win-btn ">
+                    <i class="fa-solid fa-coins" style="color: #00aa00;"></i> Commissions
+                </a>
+                <a href="/home/art/usage/" class="win-btn ">
+                    <i class="fa-solid fa-shield-halved" style="color: #aa5500;"></i> Art Usage
+                </a>
+                 <a href="/home/main/" class="win-btn ">
+                    <i class="fa-solid fa-house" style="color: #3359ff;"></i> Go Back Home
+                </a>
+                <div style="margin-left: auto; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 10px; font-weight: bold;" class="blink">!!! ONLINE !!!</span>
+                    <span class="retro-counter">0012345</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="retro-marquee">
+            <marquee behavior="scroll" direction="left" scrollamount="6">
+                WELCOME TO GIUJUTSUS'S DIGITAL ART ARCHIVE (2016-2026) ::: COMMISSIONS OPEN :::
+            </marquee>
+        </div>
+
+        <main>
+            
+<div class="win-box">
+    <div class="win-titlebar" style="background: linear-gradient(90deg, #000080, #1084d0);">
+        <span><i class="fa-solid fa-image"></i> ARTWORK_VIEWER.EXE - test9</span>
+    </div>
+
+    <div class="win-content" style="padding: 15px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <a href="/home/art/gallery/" class="win-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Gallery
+            </a>
+            
+            
+            <a href="https://file.garden/ZxeJbwpMpVUTaKTZ/art/sign2.png" target="_blank" class="win-btn" style="color: #000080;">
+                <i class="fa-solid fa-up-right-from-square"></i> Open Full Resolution Image
+            </a>
+            
+        </div>
+
+        <div class="art-detail-display-box">
+            <img src="https://file.garden/ZxeJbwpMpVUTaKTZ/art/sign2.png" alt="test9" class="art-detail-img">
+        </div>
+
+        <div class="win-inset" style="margin-top: 15px; background: transparent; border: none; padding: 0;">
+            <h2 style="margin: 0 0 10px 0; font-family: 'MS Sans Serif', Geneva, sans-serif; font-size: 18px; color: #000080; border-bottom: 2px solid #808080; padding-bottom: 5px;">
+                test9
+            </h2>
+
+            <table class="win-table" style="margin-bottom: 15px;">
+                <thead>
+                    <tr>
+                        <th colspan="2"><i class="fa-solid fa-info-circle"></i> File Specifications & Metadata</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 30%;"><strong><i class="fa-regular fa-calendar"></i> Year Created:</strong></td>
+                        <td>2026</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong><i class="fa-solid fa-film"></i> Media:</strong></td>
+                        <td>Backrooms</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td><strong><i class="fa-solid fa-wand-magic-sparkles"></i> Software / Tools:</strong></td>
+                        <td>Clip Studio Paint</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td><strong><i class="fa-solid fa-pen-nib"></i> Medium:</strong></td>
+                        <td>Pixel Art</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td><strong><i class="fa-solid fa-tags"></i> Tags:</strong></td>
+                        <td>
+                            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                
+                                <span class="tag-badge-90s">#Pixel</span>
+                                
+                                <span class="tag-badge-90s">#Fantasy</span>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <div style="border-top: 1px dashed #808080; padding-top: 10px;">
+                <h4 style="margin: 0 0 5px 0; color: #000080;"><i class="fa-solid fa-align-left"></i> Description / Artist Notes:</h4>
+                <div style="font-size: 13px; line-height: 1.6; color: #000; white-space: pre-line; background: #fafafa; padding: 10px; border: 1px solid #c0c0c0;">
+                    
+                        Candy canes sweet roll halvah marzipan chocolate cake lollipop.
+                    
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+        
+            <a href="/home/art/artworks/art-2026-06-19-00/" class="win-btn">
+                <i class="fa-solid fa-chevron-left"></i> Previous
+            </a>
+        
+
+        
+            <a href="/home/art/artworks/art-2026-06-18-00/" class="win-btn">
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        
+        </div>
+
+    </div>
+</div>
+
+<style>
+.art-detail-display-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; 
+    border: none;           
+    padding: 0;                
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.art-detail-img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border: none;             
+    outline: none;
+}
+
+.win-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 12px;
+}
+
+.win-table th {
+    background: #000080;
+    color: #ffffff;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: bold;
+}
+
+.win-table td {
+    border: 1px solid #808080;
+    padding: 6px 8px;
+    color: #000;
+}
+
+.tag-badge-90s {
+    background: #e0e0e0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 2px 6px;
+    font-size: 11px;
+    color: #000;
+}
+
+.badge-allowed {
+    background: #d4edda;
+    color: #155724;
+    padding: 2px 6px;
+    border: 1px solid #c3e6cb;
+    font-weight: bold;
+    font-size: 11px;
+}
+</style>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer win-box">
+            <p>&copy; 2016–2026 <strong>Giujutsus Art Shrine</strong>. Built with Eleventy (11ty).</p>
+        </footer>
+    </div>
+</body>
+</html>

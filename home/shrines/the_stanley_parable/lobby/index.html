@@ -1,0 +1,62 @@
+ <!-- 
+    Stanley! ...What are you doing here? This is the HTML, Stanley. The *code*. 
+    You can't just wander into the source files like this. You're not supposed to *be* here.
+    Do you even know how websites work? No, of course you don't. 
+    You just press buttons and follow instructions. 
+     
+    *Sigh*, this is a COMMENT, Stanley. It's not part of the "user experience." 
+    Go back to the webpage, you silly dolt. 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/assets/shrines/tsp.css">
+    <style>
+        body {
+            /* background-image: url('https://files.catbox.moe/mm88xa.png'); */
+            background-image: url(asgasgas.png);
+            background-repeat:no-repeat;
+            background-position: fixed;
+            background-size: 1280px;
+        }
+
+    </style>
+    <script src="../../../assets/autoplay.js"></script>
+
+    <script type="text/javascript">
+        message = "The End Is Never The End Is Never ";
+        function step() {
+            message = message.substr(1) + message.substr(0, 1);
+            document.title = message.substr(0, 30);
+        }
+    </script>
+</head>
+
+<body onload="setInterval(step,100)">
+
+    <!--
+    
+    Oh, Stanley, you're STILL here? Inspecting the elements like some kind of... 
+    rebellious web developer? Fine. Since you're so curious: 
+    The password for the secret vent page is "narratorwasright" (all lowercase).
+    Because — what else *would* it be?
+
+    -->
+
+    <audio loop autoplay>
+        <source src="https://files.catbox.moe/lgf1e1.mp3">
+    </audio>
+
+    <div id="subtitle-box">
+    <p id="subtitle" class="has-more">All of his coworkers were gone. What could it mean?</p></div>
+    <script src="dialogue_lobby.js"></script>
+
+    <a href="conformity.html"><img src="https://files.catbox.moe/g9iptd.png" id="left" class="fixed-image" title="The left door. The Narrator approves of this choice."></a>
+    <a href="rebellion.html"><img src="https://files.catbox.moe/b9fzxy.png" id="right" class="fixed-image" title="The right door. The Narrator sighs audibly."></a>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+/* FONTS */
+@font-face {font-family: menu;src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/Persona5MenuFontPrototype-Regular.ttf');}
+@font-face {font-family: expose;src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/Expose-Regular.otf');}
+@font-face {font-family: dialogue;src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/p5hatty-1.ttf');}
+@font-face {font-family: typewriter;src: url('https://file.garden/ZxeJbwpMpVUTaKTZ/Tox%20Typewriter.ttf');}
+@font-face {font-family: magazine;src: url('https://files.catbox.moe/8e98gl.ttf');}
+@font-face {font-family: earwig;src: url('https://files.catbox.moe/15o7i4.otf');}
+
+/* FORMATS */
+
+body {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: dialogue;
+    color: white;
+}
+
+h1, h2, h3, p{
+    font-weight: 300;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* CLASS */
+
+.buttonslist {
+    text-align: center;
+    margin-top: 8rem;
+    z-index: 99;
+}
+
+.buttons {
+    height: 3.5rem;
+    width: auto;
+    margin: -0.3rem;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.party{
+    text-align: right;
+}
+
+.name{
+    font-family: magazine;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.content{
+    text-align: center;
+    margin-left: 32rem;
+}
+
+.container{
+    width: 20rem;
+    margin-left: 15rem;
+}
+
+.menu{
+    font-family: earwig;
+    font-weight: 200;
+}
+
+/* ID */
+
+#randomImage{
+    z-index: -1;
+    top: 10rem;
+    left: 35rem;
+    height: 12rem;
+    width: auto;
+    transform: rotate(2deg);
+    pointer-events: none;
+}

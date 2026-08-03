@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stanley Parable Corporate Shrine</title>
+  <style>
+    /* CORPORATE CSS (BORING BUT COMPLIANT) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F5F5DC; /* Beige */
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #0073E6; /* Corporate blue */
+      color: white;
+    }
+    .content-box {
+      background-color: #EEE;
+      border: 1px solid #DDD;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    .employee-spotlight {
+      text-align: center;
+      border: 3px solid gold;
+      padding: 10px;
+    }
+    #meeting-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>STANLEY PARABLE OFFICIAL SHRINE <br> <small>(APPROVED BY NARRATIVE COMPLIANCE DIVISION)</small></h1>
+  </div>
+
+  <div class="content-box">
+    <h2>About Stanley</h2>
+    <ul>
+      <li>Top-performing button presser (2013–2024)</li>
+      <li>99.9% instruction compliance rate</li>
+      <li>Zero workplace conflicts (no thoughts detected)</li>
+    </ul>
+  </div>
+
+  <div class="employee-spotlight">
+    <img src="stanley_tie.png" alt="Stanley in a tie" width="100">
+    <h3>EMPLOYEE OF THE MONTH</h3>
+    <p>"Stanley consistently meets baseline expectations." — The Narrator</p>
+  </div>
+
+  <div class="content-box">
+    <h2>Performance Metrics</h2>
+    <p>Buttons pressed: <progress value="427" max="500"></progress> 427/500</p>
+    <p>Doors opened: <progress value="100" max="100"></progress> 100% compliance</p>
+  </div>
+
+  <!-- FAKE MEETING POPUP (TRIGGERED BY JS) -->
+  <div id="meeting-popup">
+    <h3>⏰ MANDATORY MEETING REMINDER</h3>
+    <p>Topic: "Synergizing Narrative Compliance" <br> Starts in 5 minutes.</p>
+    <button onclick="document.getElementById('meeting-popup').style.display='none'">Snooze</button>
+    <button onclick="document.getElementById('meeting-popup').style.display='none'">Dismiss</button>
+  </div>
+
+  <footer style="text-align: center; margin-top: 50px; font-size: 0.8em;">
+    © 2024 Stanley Parable Corporate. All choices property of the Narrative.
+  </footer>
+
+  <script>
+    // FORCE THE USER TO ATTEND A MEETING
+    setTimeout(() => {
+      document.getElementById('meeting-popup').style.display = 'block';
+    }, 10000); // Popup after 10 seconds
+  </script>
+</body>
+</html>

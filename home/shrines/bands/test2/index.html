@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⋆ ˚｡⋆ who really cares? ⋆ ˚｡⋆</title>
+  <style>
+    /* reset & old vibe — no borders, no glows (except subtle text shadows on headings) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0d17; /* deep black-blue */
+      font-family: 'Courier New', Courier, 'IBM Plex Mono', monospace;
+      color: #dedede;
+      line-height: 1.4;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      padding: 2rem 2rem 4rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .page-wrap {
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* --- stars (exactly 5, medium, sparse, blue/pink) --- */
+    .star {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.7;
+      mix-blend-mode: screen;
+    }
+
+    .star::before,
+    .star::after {
+      content: '';
+      position: absolute;
+      background: currentColor;
+      border-radius: 2px;
+    }
+
+    .star::before {
+      width: 20px;
+      height: 4px;
+      top: 10px;
+      left: 2px;
+    }
+    .star::after {
+      width: 4px;
+      height: 20px;
+      left: 10px;
+      top: 2px;
+    }
+
+    .star1 { top: 5%; left: 3%; color: #6fc2d4; } /* blue */
+    .star2 { top: 15%; right: 12%; color: #f6a0c1; } /* pink */
+    .star3 { bottom: 20%; left: 18%; color: #5aa9d9; } /* blue */
+    .star4 { top: 40%; right: 25%; color: #f6a0c1; } /* pink */
+    .star5 { bottom: 10%; right: 8%; color: #6fc2d4; } /* blue */
+
+    /* no borders, no glow – even on headings we keep only offset (no blur) */
+    h1, h2, h3 {
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 0 #131a3b, -1px -1px 0 #301b28; /* very subtle offset */
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: #f0e9e0;
+    }
+
+    /* ---- hero section ---- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 4rem 0 6rem 0;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* album cover wrapper — text overflows */
+    .cover-wrapper {
+      position: relative;
+      width: 360px;
+      max-width: 80vw;
+      margin-bottom: 0; /* removed extra space */
+    }
+
+    .album-cover {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* placeholder cover (dark abstract) */
+    .placeholder-cover {
+      aspect-ratio: 1/1;
+      background: linear-gradient(145deg, #12172f 10%, #3d3152 60%, #103b4e 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #ffe4f3;
+      font-family: 'Times New Roman', serif;
+      letter-spacing: 6px;
+      border: none;
+      box-shadow: none;
+      position: relative;
+      z-index: 4;
+    }
+
+    .placeholder-cover span {
+      transform: rotate(-5deg);
+      background: rgba(10, 1, 18, 0.3);
+      padding: 0.5rem 1rem;
+      font-style: italic;
+      color: #fad9f0;
+      font-size: 2rem;
+    }
+
+    /* top left corner text (WHO REALLY CARES?) */
+    .title-corner {
+      position: absolute;
+      top: -12px;
+      left: -18px;
+      font-family: 'Courier New', monospace;
+      font-weight: 800;
+      font-size: 2.3rem;
+      line-height: 1;
+      color: #99d6f0;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      z-index: 10;
+      white-space: nowrap;
+      text-shadow: 2px 2px 0 #0e121f, 3px 3px 0 #fa9ec4; /* offset, no blur */
+      mix-blend-mode: hard-light;
+    }
+
+    /* BOTTOM RIGHT corner text (TV GIRL) — as requested */
+    .band-corner {
+      position: absolute;
+      bottom: -10px;
+      right: -12px;
+      font-family: 'Courier New', monospace;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #f79fc7;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      z-index: 10;
+      text-shadow: 2px 2px 0 #101729;
+      white-space: nowrap;
+      mix-blend-mode: screen;
+    }
+
+    /* rotating cd — partially behind cover (poking out a little) */
+    .cd-container {
+      width: 360px;            /* same as cover wrapper */
+      max-width: 80vw;
+      margin-top: -30px;        /* lift it up */
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .cd {
+      width: 280px;            /* smaller than cover, so it tucks behind */
+      max-width: 70vw;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #446688, #111a2b 70%);
+      border: none;
+      box-shadow: none;
+      animation: spin 16s infinite linear;
+      filter: contrast(0.9) brightness(0.8);
+      /* shift left/up to peek from behind left+top edges? 
+         we want it mostly behind, but visible from behind the cover.
+         negative margins make it peek from top/left */
+      margin-left: -40px;       /* pull left so right edge shows */
+      margin-top: -100px;       /* pull up so bottom shows — adjust to preference */
+      position: relative;
+      z-index: 2;
+    }
+
+    /* cd label */
+    .cd::after {
+      content: '';
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, #acb8ce, #13182b);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+    }
+
+    /* cd shine (old vibe) */
+    .cd::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      background: repeating-linear-gradient(90deg, transparent 0px, transparent 25px, rgba(200,230,250,0.15) 25px, rgba(220,180,250,0.1) 45px);
+      top: 45%;
+      transform: rotate(25deg);
+      z-index: 3;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* tracklist – strictly right-aligned, no background */
+    .tracklist-block {
+      position: absolute;
+      top: 12rem;
+      right: 5%;
+      max-width: 300px;
+      text-align: right;
+      z-index: 15;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+
+    .tracklist-block h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #b3dff0;
+      border-bottom: 1px dashed #644e75; /* only a faint dashed line for structure */
+      padding-bottom: 0.3rem;
+      text-shadow: 1px 1px 0 #26182b;
+      display: inline-block;      /* to make border fit text width */
+      border-bottom-style: dashed;
+    }
+
+    .tracklist-block ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tracklist-block li {
+      font-size: 1rem;
+      line-height: 1.8;
+      text-transform: uppercase;
+      color: #e2cddb;
+      white-space: nowrap;
+      letter-spacing: 1.5px;
+      border: none;
+      text-align: right;
+    }
+
+    .tracklist-block li::before {
+      content: '⋆  ';
+      color: #5fa9d9;
+      font-weight: normal;
+      display: inline-block;
+      width: 1.5rem;           /* slight spacing */
+      text-align: right;
+    }
+
+    /* extra track columns (from second graphic) — also transparent */
+    .track-row {
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+      margin-top: 0.5rem;
+      background: transparent;
+    }
+    .track-col {
+      text-align: right;
+      background: transparent;
+    }
+    .track-col p {
+      line-height: 1.9;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin: 0;
+      background: transparent;
+    }
+
+    /* scroll down opinions */
+    .scroll-down-section {
+      margin-top: 8rem;
+      width: 100%;
+      border-top: 2px dotted #56658b;
+      padding-top: 2.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .opinions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+
+    .opinion-text {
+      max-width: 450px;
+      background: rgba(20, 8, 34, 0.3);
+      padding: 2rem;
+      border: none;
+      color: #e3d3e6;
+    }
+
+    .opinion-text p {
+      margin-bottom: 1.2rem;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
+
+    .opinion-text .italic {
+      font-style: italic;
+      color: #f5b0cb;
+    }
+
+    .mini-graphic {
+      background: #0d1023;
+      padding: 1rem 2rem;
+      color: #9bc9e0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-left: 3px solid #f7aac1;
+      align-self: center;
+    }
+
+    .mini-graphic div {
+      line-height: 2;
+      font-family: 'Courier New', monospace;
+    }
+
+    .lyric-snippet {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #8099bb;
+      max-width: 700px;
+      word-break: break-all;
+      font-family: monospace;
+      white-space: pre-wrap;
+      background: rgba(0,0,0,0.2);
+      padding: 1rem;
+      line-height: 1.9;
+    }
+
+    /* responsive */
+    @media (max-width: 800px) {
+      .tracklist-block {
+        position: static;
+        margin: 2rem auto;
+        text-align: center;
+        background: transparent;
+        max-width: 100%;
+      }
+      .tracklist-block ul, .tracklist-block li {
+        text-align: center;
+      }
+      .track-row {
+        justify-content: center;
+      }
+      .title-corner {
+        font-size: 1.8rem;
+        left: -8px;
+      }
+      .band-corner {
+        font-size: 1.5rem;
+        right: -8px; 
+      }
+      .cd {
+        margin-left: -20px;  /* adjust for mobile */
+        margin-top: -70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 5 fixed stars -->
+  <div class="star star1"></div>
+  <div class="star star2"></div>
+  <div class="star star3"></div>
+  <div class="star star4"></div>
+  <div class="star star5"></div>
+
+  <div class="page-wrap">
+    <!-- tracklist - absolute, no background, right aligned -->
+    <div class="tracklist-block">
+      <h3>✦ WHO REALLY CARES ✦</h3>
+      <ul>
+        <li>Taking What's Not Yours</li>
+        <li>Cigarettes out the Window</li>
+        <li>Till You Tell Me to Leave</li>
+        <li>Act Like You Never Met Me</li>
+        <li>Loving Machine</li>
+        <li>Heaven is a Bedroom</li>
+        <li>Song About Me</li>
+        <li>Not Allowed</li>
+        <li>For You</li>
+        <li>Safeword</li>
+      </ul>
+      <!-- extra tracks from second graphic, also transparent -->
+      <div class="track-row">
+        <div class="track-col">
+          <p>For You<br>Loving Machine<br>Heaven is a Bedroom</p>
+        </div>
+      </div>
+      <!-- tiny credit blends in -->
+      <div style="margin-top: 1rem; font-size:0.7rem; color:#aa99cc; background:transparent;">TV GIRL · 2024</div>
+    </div>
+
+    <!-- hero: album cover + corner texts, and cd peeking -->
+    <div class="hero">
+      <div class="cover-wrapper">
+        <!-- album cover (simulated) -->
+        <div class="album-cover placeholder-cover">
+          <span>TV GIRL</span>
+        </div>
+        <!-- top left: WHO REALLY CARES? -->
+        <div class="title-corner">WHO REALLY<br>CARES?</div>
+        <!-- bottom right: TV GIRL (moved) -->
+        <div class="band-corner">TV GIRL</div>
+      </div>
+
+      <!-- rotating CD partially behind cover (peeking) -->
+      <div class="cd-container">
+        <div class="cd"></div>
+      </div>
+    </div>
+
+    <!-- lyrics fragment from first image (old texture) -->
+    <div class="lyric-snippet">
+      (If it was all in my mind and you don't know why) <br>
+      Keep the chaos cause you dont knowwhy <br>
+      Yeah, I wanna know why (and you dont know why) <br>
+      Why'd you have to make a record tout me? (And you dont know why) <br>
+      Why-d-whydyou have tomakea, whydyou have to make a- <br>
+      ✦ Song About Me – TV Girl ✦
+    </div>
+
+    <!-- scroll down for opinions and extra stuff -->
+    <div class="scroll-down-section">
+      <div class="opinions">
+        <div class="opinion-text">
+          <p class="italic">⋆ ˚｡⋆ who really cares? i do, obviously. this album feels like a warm vhs tape left in the sun — melancholic, sampled, endlessly quotable. i first heard it on a rainy day, and it’s been stuck in my head since.</p>
+          <p>✦ "heaven is a bedroom" plays and the whole room turns blue. it’s not just lo-fi, it’s a specific new york city loneliness mixed with a crush. my favourite detail: the way 'loving machine' stutters. it’s imperfect on purpose.</p>
+          <p>✦ this shrine is for the 3am plays, the cigarette ashes on the windowsill, and that question: <span style="color:#f7b0d0;">who really cares?</span> we do.</p>
+        </div>
+        <div class="mini-graphic">
+          <div>CIGARETTES OUT THE WINDOW</div>
+          <div>TAKING WHAT'S NOT YOURS</div>
+          <div>SONG ABOUT ME</div>
+          <div>TILL YOU TELL ME TO LEAVE</div>
+          <div>ACT LIKE YOU NEVER MET ME</div>
+          <div>SAFEWORD</div>
+          <div>NOT ALLOWED</div>
+          <div style="color:#f6a0c1;">⋆｡°✩</div>
+        </div>
+      </div>
+      <!-- bottom chaotic line from third image -->
+      <div style="margin-top: 4rem; font-size: 0.7rem; text-align: right; color: #5b6f9b; border-top: 1px dashed #4b3e60; padding-top: 1rem;">
+        <span>tv · cigarettes out the window · talking what's not yours · song about me · til you tell me to leave · do the act like you never met me · safeword · not allowed · for you · loving machine · heaven is a bedroom</span><br>
+        <span style="color:#f6a0c1;">black blue pink / no borders, no glow — just worn feelings</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- enforce no borders, no glow (except heading offset) -->
+  <style>
+    *:focus, *:active, .cd, .album-cover, .tracklist-block, .opinion-text, img, div, li, ul {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    h1, h2, h3, .title-corner, .band-corner {
+      text-shadow: 1px 1px 0 #18233e, -0.5px -0.5px 0 #411f31 !important;
+    }
+    .title-corner {
+      text-shadow: 2px 2px 0 #0a0f21, 3px 3px 0 #bc7196 !important;
+    }
+    .band-corner {
+      text-shadow: 2px 2px 0 #101729, 3px 3px 0 #8a5071 !important;
+    }
+    .tracklist-block h3 {
+      text-shadow: 1px 1px 0 #26182b !important;
+    }
+    .cd, .cd::after, .cd::before {
+      text-shadow: none !important;
+    }
+    .star::before, .star::after {
+      box-shadow: none;
+    }
+    body {
+      background: #0b0b17;
+    }
+    /* ensure tracklist block truly transparent */
+    .tracklist-block, .tracklist-block *, .track-row, .track-col {
+      background: transparent !important;
+      backdrop-filter: none !important;
+    }
+    /* keep h3 underline dashed but no glow */
+    .tracklist-block h3 {
+      border-bottom: 1px dashed #5f6280 !important;
+      text-shadow: 0.5px 0.5px 0 #2c1b30 !important;
+    }
+  </style>
+</body>
+</html>

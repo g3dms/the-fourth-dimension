@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>THE 4TH DIMENSION</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="">
+  <style>
+    body {
+      background-image: url('');
+    }
+  </style>
+  <script src="/assets/autoplay.js"></script>
+</head>
+
+<body>
+
+    <audio autoplay loop>
+        <source src="">
+    </audio>
+
+    <h2>Day 1 (20/7/2025)</h2>
+<ul>
+<li>
+<p>Did Learn to Code From Zero (GDScript)</p>
+</li>
+<li>
+<p>Declaring functions: func name():</p>
+</li>
+<li>
+<p>Normally uses _ for functions</p>
+</li>
+<li>
+<p>You cannot use a number at the start of an identifier</p>
+</li>
+<li>
+<p>Rotate uses radians</p>
+</li>
+<li>
+<p>rotate(), jump(), show(), hide()</p>
+</li>
+<li>
+<p>y-axis POINTS DOWN</p>
+</li>
+<li>
+<p>Sub variables - use .</p>
+<ul>
+<li>e.g scale.x, scale.y</li>
+</ul>
+</li>
+<li>
+<p>Setting variables - var health = 100</p>
+</li>
+<li>
+<p>_process(delta) function -&gt; does calculations or a continuous process</p>
+<ul>
+<li>the time each frame is processed is different -&gt; uses parameter delta which represents a time difference (time passed since previous frame)</li>
+<li>delta helps make the game more consistent for different computers (who have different processing speeds) by making motion time-dependent rather than frame-dependent by multiplying it
+<ul>
+<li>FOR EXAMPLE:
+<ul>
+<li>player.x += 5  # Move 5 pixels EVERY FRAME</li>
+<li>Thus, for faster computers, they move faster</li>
+<li>but for player.x += 5 * delta_time  # Move 5 pixels PER SECOND</li>
+<li>It is time consistent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>func _process(delta): rotate (4 * delta)</p>
+</li>
+<li>
+<p>MEANS that it rotates 4 radians a second</p>
+</li>
+<li>
+<p>You can only use a variable inside a function if you define it in the function</p>
+</li>
+<li>
+<p>*= exists</p>
+</li>
+<li>
+<p>2D vectors -&gt; Vector2, does not need to use sub variables e.g. position = Vector2(50, 0)</p>
+</li>
+<li>
+<p>for loops do NOT run infinitely, so it’s much less likely for bugs compared to while loops -&gt; recommended to favour for loops over while loops</p>
+</li>
+<li>
+<p>for loops: for i in range(2), for i in [0, 1, 2]</p>
+</li>
+<li>
+<p>setting arrays: var numbers = [1,2,3]</p>
+</li>
+<li>
+<p>lerp() function ?</p>
+</li>
+<li>
+<p>array.append(thing) / array.pop_front(thing) / array.pop_back(thing)</p>
+</li>
+<li>
+<p>You can use negative indices in arrays, where -1 is the last item, -2 is the second last item, etc.</p>
+</li>
+<li>
+<p>dictionaries have keys that point to a value (almost like associative arrays), all keys have to be unique You set it like a variable</p>
+</li>
+<li>
+<p>var inventory = { &quot;healing heart&quot; : 3, &quot;gems&quot;: 5,}</p>
+</li>
+<li>
+<p>Type hints lets the computer know what type of value you want for variables</p>
+</li>
+<li>
+<p>var variable_name: Type = value</p>
+</li>
+<li>
+<p>e.g. var cell_size: Vector2 = Vector2(50.0, 50.0)</p>
+</li>
+<li>
+<p>You can detect whether a key is pressed using Input.is_action_pressed(), which returns true if it’s pressed or false if it isn’t.</p>
+</li>
+<li>
+<p>$ is shorthand for get_node(). So in the code above, $AnimatedSprite2D.play() is the same as get_node(&quot;AnimatedSprite2D&quot;).play().</p>
+</li>
+</ul>
+<p>In GDScript, $ returns the node at the relative path from the current node, or returns null if the node is not found. Since AnimatedSprite2D is a child of the current node, we can use $AnimatedSprite2D</p>
+<p>21/7/2025<br>
+Finished my first game (at 2 am lol), dodge the creeps from godot documentation</p>
+<h2></h2>
+
+
+</body>
+
+</html>

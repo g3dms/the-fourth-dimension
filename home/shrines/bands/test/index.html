@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>who really cares? — tv girl shrine</title>
+    <!-- fonts & base styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2ebe5;
+            background-image: 
+                linear-gradient(45deg, rgba(205, 183, 158, 0.15) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(205, 183, 158, 0.15) 25%, transparent 25%);
+            background-size: 40px 40px;
+            font-family: 'Space Mono', monospace, 'Courier New';
+            color: #231f1b;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* texture overlays (grunge / tape) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.08 0"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.15"/></svg>');
+            pointer-events: none;
+            mix-blend-mode: multiply;
+            z-index: 5;
+        }
+
+        .shrine-container {
+            max-width: 1300px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2rem;
+            background: rgba(242, 235, 229, 0.7);
+            backdrop-filter: blur(3px);
+            padding: 2.5rem 2rem;
+            border: 3px solid #3a3129;
+            box-shadow: 20px 20px 0 rgba(58, 49, 41, 0.3), inset 0 0 0 2px #e6d9ce, inset 0 0 0 5px #fffcf8;
+        }
+
+        /* LEFT SIDE — cd rotation + collage graphics */
+        .left-panel {
+            border-right: 3px dashed #8b7a6b;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* rotating cd enclosure */
+        .cd-case {
+            background: #d4c4b3;
+            padding: 2rem 2rem 1.5rem;
+            border: 3px solid #4a3f37;
+            box-shadow: inset 0 0 0 3px #f1e3d5, 8px 8px 0 #4e4138;
+            transform: rotate(-1deg);
+            transition: transform 0.2s;
+        }
+
+        .cd-case:hover {
+            transform: rotate(0deg) scale(1.01);
+        }
+
+        .disc-rotator {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #b5b5b5, #2d2d2d 70%);
+            box-shadow: 0 0 0 10px #595043, 0 0 0 13px #998d82, 0 15px 25px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spin 12s infinite linear;
+            border: 2px dashed #f0d5b0;
+        }
+
+        .disc-rotator::after {
+            content: "TV GIRL ● WHO REALLY CARES";
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: #f0e7db;
+            text-shadow: 2px 2px 0 #1f1a16;
+            background: #4a3c33b3;
+            width: 100%;
+            text-align: center;
+            padding: 6px 0;
+            transform: rotate(-20deg);
+            font-weight: 700;
+            border-top: 2px solid #cfa87c;
+            border-bottom: 2px solid #cfa87c;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* graphic fragments inspired by the jpgs */
+        .graphic-fragments {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .fragment {
+            background: #dacfc1;
+            border: 3px solid #573f2e;
+            padding: 0.8rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 7px 7px 0 #342b24;
+            color: #2c241e;
+            transform: rotate(var(--rot, 0deg));
+            transition: 0.1s linear;
+            font-style: italic;
+            background-image: linear-gradient(145deg, #fff2e6 0%, #e1cfbc 80%);
+            mix-blend-mode: multiply;
+        }
+
+        .fragment:nth-child(1) { --rot: 2deg; background: #eedbcb; }
+        .fragment:nth-child(2) { --rot: -3deg; background: #dac9b9; }
+        .fragment:nth-child(3) { --rot: 4deg; background: #f5e3d2; padding: 0.5rem 1.5rem; }
+        .fragment:nth-child(4) { --rot: -5deg; background: #b9a38e; color: #f0e2d4; }
+        .fragment:nth-child(5) { --rot: 1deg; background: #edd6c0; width: 100%; max-width: 260px;}
+
+        /* placeholder image block (tv girl vibe) */
+        .placeholder-block {
+            background: repeating-linear-gradient(45deg, #9a8b7a, #9a8b7a 10px, #b6a692 10px, #b6a692 20px);
+            border: 5px double #34281f;
+            padding: 2rem 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 6px;
+            color: #2c1f17;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #bda98e;
+            box-shadow: inset 0 0 0 5px #fff6ea, 0 10px 0 #3b2f26;
+            transform: rotate(-2deg);
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+
+        .placeholder-block span {
+            background: #fff9f0;
+            padding: 0.1rem 1rem;
+            border: 3px solid #3a2b1f;
+            font-size: 1.2rem;
+            font-family: 'Space Mono';
+            text-transform: uppercase;
+            mix-blend-mode: hard-light;
+        }
+
+        /* RIGHT SIDE — tracklist + personal opinion / lyrics collage */
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 2.3rem;
+        }
+
+        /* tracklist — reconstructed from images with chaotic layout */
+        .tracklist-block {
+            background: #eadbcd;
+            border: 5px solid #4b3a2d;
+            padding: 2rem 1.5rem 1.5rem;
+            box-shadow: inset 0 0 0 3px #fff5e6, 12px 12px 0 #3b2d23;
+            transform: rotate(1deg);
+            position: relative;
+        }
+
+        .tracklist-block::before {
+            content: "✦ side a / side b ✦";
+            position: absolute;
+            top: -15px; left: 20px;
+            background: #3a2d23;
+            color: #ead3bb;
+            padding: 0.2rem 1.2rem;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            border: 2px solid #f0c9a7;
+            transform: rotate(-3deg);
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .track-item {
+            font-size: 1.2rem;
+            border-bottom: 2px dotted #6e5b4b;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: baseline;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #261f1a;
+            background: rgba(255,245,235,0.5);
+            padding-left: 5px;
+        }
+
+        .track-item::before {
+            content: "◉";
+            margin-right: 10px;
+            color: #a04f2c;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 0 #4f2f1b;
+        }
+
+        .track-item:nth-child(odd) {
+            transform: rotate(-0.5deg);
+        }
+        .track-item:nth-child(even) {
+            transform: rotate(1deg);
+            background: rgba(200,180,160,0.2);
+        }
+
+        /* inline chaotic lyrics / "song about me" fragment */
+        .chaos-lyrics {
+            background: #1f1712;
+            color: #ecd9c0;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            border: 6px double #9c7f64;
+            box-shadow: 0 0 0 3px #ffefe1, 10px 10px 0 #514439;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-style: italic;
+            transform: rotate(-0.8deg);
+            max-height: 220px;
+            overflow-y: auto;
+            text-shadow: 1px 1px 0 #2e1c0e;
+        }
+
+        .chaos-lyrics p {
+            margin-bottom: 0.5rem;
+            border-left: 6px solid #ab7752;
+            padding-left: 12px;
+        }
+
+        .chaos-lyrics .small-caps {
+            font-variant: small-caps;
+            font-weight: 700;
+            color: #feb27b;
+        }
+
+        /* opinion piece — artistic blurb */
+        .opinion-box {
+            background: #ece1d3;
+            padding: 1.5rem 1.8rem;
+            border: 4px solid #987b62;
+            box-shadow: inset -6px -6px 0 #b7a088, 10px 10px 0 #2d241e;
+            transform: rotate(1.5deg);
+            font-size: 1rem;
+            color: #1f1a14;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .opinion-box strong {
+            font-size: 2rem;
+            line-height: 1;
+            background: #d4b594;
+            padding: 0.1rem 0.5rem;
+            border: 3px solid #37281d;
+            margin-right: 10px;
+            display: inline-block;
+            transform: rotate(-4deg);
+        }
+
+        .opinion-text {
+            display: inline;
+            background: #fff5e5;
+            box-decoration-break: clone;
+            padding: 0.25rem 0.75rem;
+            border: 2px dashed #bb8763;
+            font-weight: 500;
+        }
+
+        /* micro graphics (cigarette / window) */
+        .micro-graphic {
+            display: flex;
+            justify-content: space-around;
+            margin: 0.5rem 0;
+            color: #573e2b;
+            font-size: 2rem;
+            filter: drop-shadow(2px 4px 0 #ab8e76);
+        }
+
+        /* responsive */
+        @media (max-width: 950px) {
+            .shrine-container {
+                grid-template-columns: 1fr;
+            }
+            .left-panel {
+                border-right: 0;
+                padding-right: 0;
+            }
+        }
+
+        /* extra chaos text from jpg */
+        .hand-stamp {
+            font-size: 0.8rem;
+            background: #3c3027;
+            color: #dcbfa2;
+            padding: 0.2rem 0.5rem;
+            border: 2px solid #a27958;
+            width: fit-content;
+            transform: rotate(2deg);
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="shrine-container">
+        <!-- left side: rotating cd and graphical quotes from the images -->
+        <div class="left-panel">
+            <div class="cd-case">
+                <div class="disc-rotator"></div>
+                <!-- tiny text from jpg: "who really cares?" -->
+                <div class="hand-stamp" style="margin: 1rem auto 0; transform: rotate(-1deg);">⏤ who really cares? ⏤</div>
+            </div>
+
+            <!-- reconstructed graphics from first image: "But who really cares? / If it was all in my mind..." -->
+            <div class="graphic-fragments">
+                <div class="fragment">but who really cares?</div>
+                <div class="fragment" style="font-size:0.9rem;">if it was all in my mind (and you don't know why)</div>
+                <div class="fragment">to begin with (and you don't know why)</div>
+                <div class="fragment">keep the chaos cause you don't know why</div>
+                <div class="fragment" style="background:#c9ad93;">yeah, i wanna know why (and you don't know why)</div>
+            </div>
+
+            <!-- "why'd you have to make a record tout me?" block (lyric splice) -->
+            <div style="background:#e7cfb5; border:5px solid #624c3b; padding:0.8rem; transform:rotate(-1deg); box-shadow: 6px 6px 0 #392d25;">
+                <span style="font-weight:700; font-size:1.3rem; background:#fff; mix-blend-mode:multiply; padding:0 5px;">✧ WHY'D YOU HAVE TO MAKE A RECORD 'BOUT ME? ✧</span>
+                <div style="display:flex; gap:1rem; margin-top:8px; font-size:1.1rem; flex-wrap:wrap;">
+                    <span style="background:#bda690; padding:0 10px;">(and you don't know why)</span>
+                    <span style="background:#bda690; padding:0 10px;">why-d-whydyouhavetomakea</span>
+                </div>
+            </div>
+
+            <!-- placeholder image (inspired by the visual style) -->
+            <div class="placeholder-block">
+                <span>TV GIRL</span>  <br> 
+                <span style="font-size:1rem;">✦  ﾟ・．..　· ✦</span>
+            </div>
+
+            <!-- cigarettes out the window reference + second image snippet -->
+            <div class="micro-graphic">
+                <span>🚬🚬🚬</span>
+                <span>🚬🚬</span>
+                <span>🚬🚬🚬</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; background:#0000001a; padding:0.5rem; font-size:1rem; border:3px dotted #6a4f39;">
+                <span>Cigarettes out the Window</span>
+                <span>Till You Tell Me to Leave</span>
+                <span>Act Like You Never Met Me</span>
+            </div>
+        </div>
+
+        <!-- right side: tracklist and opinions -->
+        <div class="right-panel">
+            <!-- tracklist from second/third images: mixed order, artistic -->
+            <div class="tracklist-block">
+                <div class="track-grid">
+                    <!-- side a / b style, including duplicates etc -->
+                    <div class="track-item">Taking What's Not Yours</div>
+                    <div class="track-item">Cigarettes out the Window</div>
+                    <div class="track-item">Till You Tell Me to Leave</div>
+                    <div class="track-item">Act Like You Never Met Me</div>
+                    <div class="track-item">Loving Machine</div>
+                    <div class="track-item">Heaven is a Bedroom</div>
+                    <div class="track-item">Song About Me</div>
+                    <div class="track-item">Not Allowed</div>
+                    <div class="track-item">For You</div>
+                    <div class="track-item">Safeword</div>
+                    <div class="track-item">For You</div>          <!-- duplicate as in image -->
+                    <div class="track-item">Loving Machine</div>   <!-- appears twice -->
+                    <div class="track-item">Heaven is a Bedroom</div>
+                    <div class="track-item" style="grid-column: span 2; background:#dac1ab;">♢ DO THE (ACT LIKE YOU NEVER MET ME) ♢</div>
+                </div>
+                <!-- additional graphic: "TV" from third image -->
+                <div style="margin-top: 20px; font-size: 4rem; line-height: 1; text-align: right; color: #7a5f48; opacity: 0.5; border-top: 3px double;">tv</div>
+            </div>
+
+            <!-- CHAOS / LYRICS EXCERPT (from first image: song about me by tv girl) -->
+            <div class="chaos-lyrics">
+                <p>🎤 <span class="small-caps">"Song About Me — TV Girl"</span></p>
+                <p>If it was all in my mind (and you don't know why) <br>
+                To begin with (and you don't know why) <br>
+                Keep the chaos cause you don't know why <br>
+                Yeah, I wanna know why (and you don't know why) <br>
+                Why'd you have to make a record 'bout me? (and you don't know why) <br>
+                Why-d-whydyouhavetomakea, whydyouhavetomakea — (and you don't know why)</p>
+                <p style="font-size:0.8rem; text-align:right;">✧ ﾟbut who really cares? ✧</p>
+            </div>
+
+            <!-- personal opinion piece (artistic) -->
+            <div class="opinion-box">
+                <strong>✧</strong> 
+                <span class="opinion-text">i don't usually write about albums, but 'who really cares?' hits like a half‑remembered summer mixtape. tv girl wraps heartbreak in a warm blanket of samples and irony, yet underneath it all, it's sincerity wearing a disguise. loving machine → heaven is a bedroom is an unholy duo. and the way "Song About Me" plays with meta-narrative? yes. it's chaotic, romantic, and feels like flipping through someone's diary. 10/10 would keep the chaos.</span>
+                <div style="margin-top:1rem; font-size:1.5rem; text-align:right; border-top: 4px double #a08168; padding-top: 0.5rem;">— who really cares? i do.</div>
+            </div>
+
+            <!-- tiny detail: safeword / not allowed sticker -->
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: flex-end;">
+                <span style="background:#1d1610; color:#decbb8; padding: 0.3rem 1rem; border-radius: 0; border: 3px solid #a98160; transform: rotate(2deg);">♯ SAFEWORD</span>
+                <span style="background:#bca98f; color:#1d130e; padding: 0.3rem 1rem; border: 3px solid #34281f; transform: rotate(-1deg);">🚫 NOT ALLOWED</span>
+            </div>
+            <!-- final touch from third image: "Do The) Act Like You Never Met Me" -->
+            <div style="background: #cbb59e; padding: 0.5rem; text-align: center; border: 6px ridge #63503f; letter-spacing: 2px;">
+                <span style="font-weight: 700;">DO THE) ACT LIKE YOU NEVER MET ME</span> <br>
+                <span style="font-size:0.7rem;">(cigarettes out the window · taking what's not yours)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- extra floating element: small rotating cd imprint -->
+    <div style="position: fixed; bottom: 10px; right: 15px; opacity: 0.2; pointer-events: none; z-index: 0;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; border: 5px dotted #574535; animation: spin 30s infinite linear;"></div>
+    </div>
+</body>
+</html>

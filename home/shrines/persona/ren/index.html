@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Take your time.</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="/assets/shrines/persona.css">
+  <style>
+    body {
+      background-image: url('https://file.garden/ZxeJbwpMpVUTaKTZ/ren_background.jpg');
+    }
+  </style>
+  <script src="assets/autoplay.js"></script>
+  <script type="text/javascript">
+    message = "Take your time. . . Take your time. . .  Take your time. . . ";
+    function step() {
+      message = message.substr(1) + message.substr(0, 1);
+      document.title = message.substr(0, 30);
+    }
+  </script>
+</head>
+
+<body class="party" onload="setInterval(step,100)">
+    <audio loop autoplay>
+      <source src="https://files.catbox.moe/zvo4fo.mp3">
+    </audio>
+    <div class="content">
+
+      <h1 class="name">
+        Ren Amamiya /<br>Akira Kurusu
+      </h1>
+
+      <img id="randomImage" src="">
+      <script>
+        const images = JSON.parse(
+          `https://files.catbox.moe/tw4ht7.png,https://files.catbox.moe/7kzi99.png,https://files.catbox.moe/uuia3n.png,https://files.catbox.moe/c44fwz.png,https://files.catbox.moe/lhocvy.png`
+        );
+
+        // Set random image
+        if (images.length > 0) {
+          document.getElementById('randomImage').src =
+            images[Math.floor(Math.random() * images.length)];
+        }
+
+      </script>
+
+      <div class="container">
+
+
+        <h1 class="menu">Profile</h1>
+
+        <p style="text-align:left;">
+          Name: Ren Amamiya / Akira Kurusu<br>
+          Code Name: Joker<br>
+          Age: 18<br>
+          Height: 175 cm (5&#39;9&quot;)<br>
+          Arcana: Fool, World<br>
+        </p>
+
+        <img src="https://files.catbox.moe/zm6s2j.gif" style="height:10rem;width:auto;">
+
+        <h1 class="menu">Ramblings</h1>
+
+        <p>Test</p>
+
+
+        <a href="../party">
+          <h1 class="menu">Back</h1>
+        </a>
+      </div>
+
+    </div>
+  </body>
+
+</html>

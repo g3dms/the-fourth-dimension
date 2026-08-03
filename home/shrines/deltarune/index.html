@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HO HO HO!</title>
+    <link rel="stylesheet" href="../../../assets/shrines/utdr.css">
+    <style>
+        body {
+            background-image: url('https://files.catbox.moe/hc7z9t.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #lancer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            position: relative;
+            animation: slideIn 0.2s 2s forwards;
+            transform: translateX(650%); /* Start off-screen to the right */
+            z-index: 3;
+            margin-top: 5rem;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(650%);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #explosion{
+            display: none;
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+    <script src="../../../assets/autoplay.js"></script>
+</head>
+
+<body>
+    <audio autoplay>
+        <source src="https://files.catbox.moe/zwaf2t.mp3">
+    </audio>
+
+    <audio id="lancerAudio" src="https://files.catbox.moe/c1zl6a.mp3" loop></audio>
+
+    <img src="https://files.catbox.moe/xlrt0y.png" id="lancer">
+
+    <img src="https://files.catbox.moe/qfb3fn.gifv" id="explosion">
+
+    <script src="lancer.js"></script>
+</body>
+
+</html>

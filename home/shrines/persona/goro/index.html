@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>I will carve my own path for myself.</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <link rel="stylesheet" href="/assets/shrines/persona.css">
+  <style>
+    body {
+      background-image: url('https://files.catbox.moe/eaawi2.png');
+    }
+  </style>
+  <script src="assets/autoplay.js"></script>
+  <script type="text/javascript">
+    message = "I will carve my own path for myself. . . ";
+    function step() {
+      message = message.substr(1) + message.substr(0, 1);
+      document.title = message.substr(0, 30);
+    }
+  </script>
+</head>
+
+<body class="party" onload="setInterval(step,100)">
+    <audio loop autoplay>
+      <source src="https://files.catbox.moe/znd2fm.mp3">
+    </audio>
+    <div class="content">
+
+      <h1 class="name">
+        Goro<br>Akechi
+      </h1>
+
+      <img id="randomImage" src="">
+      <script>
+        const images = JSON.parse(
+          `https://files.catbox.moe/g0jm32.png,https://files.catbox.moe/qlqpx0.png,https://files.catbox.moe/02vea4.png,https://files.catbox.moe/0g1og4.png,https://files.catbox.moe/8tj9hd.png,https://files.catbox.moe/opiq92.png,https://files.catbox.moe/on05qc.png,https://files.catbox.moe/xusrzt.png,https://files.catbox.moe/7mk7qc.png`
+        );
+
+        // Set random image
+        if (images.length > 0) {
+          document.getElementById('randomImage').src =
+            images[Math.floor(Math.random() * images.length)];
+        }
+
+      </script>
+
+      <div class="container">
+
+
+        <h1 class="menu">Profile</h1>
+
+        <p style="text-align:left;">
+          Name: Goro Akechi<br>
+          Code Name: Crow<br>
+          Age: 18<br>
+          Height: 178 cm (5&#39;10&quot;)<br>
+          Arcana: Justice<br>
+        </p>
+
+        <img src="https://files.catbox.moe/je9kgj.gif" style="height:10rem;width:auto;">
+
+        <h1 class="menu">Ramblings</h1>
+
+        <p>Let me just yap about <a href="https://megamitensei.fandom.com/wiki/Goro_Akechi">Goro Akechi</a> for a second, because <em>wow</em>, what a disaster of a man. I went into his Confidant fully aware about him being a fan-favourite and prepared to side-eye him the whole time (because obviously something’s off with this guy), but then Rank 9 hit me like a truck. That Mementos fight?? The raw, seething &quot;I hate you&quot;?? I SPAMMED THE STEAM SCREENSHOT BUTTON. And when he SHOT JOKER?? I was screaming, convinced I’d somehow triggered the bad ending because WHAT do you MEAN he just??? DID THAT?</p>
+<p>And don’t even get me started on the Boiler Room speech with his little rant to Amamiya and the team — <em>&quot;I was extremely particular about my life, my grades, my public image! So someone would want me around! (…) How does someone like you have things I don’t???&quot;</em> LIKE… Who gave you the right to punch me in the heart like that? The desperation, the years of screaming into the void just to be seen, it’s so messed up and so, <em>so</em> good. OF COURSE, yes, he’s obviously a bad person, but that’s what makes him brilliant.</p>
+<p>This game had the AUDACITY to make me care about this stupid detective prince. I didn’t expect to care this much about a guy who’s basically a walking red flag, but here we are. Akechi, you tragic, beautiful, terrifying rat man. I adore you.</p>
+<p>(Note: I HAVEN’T FINISHED THE THIRD SEMESTER YET BECAUSE I HAD 3 WHOLE EXAM SESSIONS IN A ROW…sobs…, huhu)</p>
+
+
+        <a href="../party">
+          <h1 class="menu">Back</h1>
+        </a>
+      </div>
+
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,148 @@
+@import url(https://db.onlinewebfonts.com/c/0209bfe594ed24b75ee2aac06529e4f9?family=Neue+Haas+Grotesk+Display+Pro+75+Bold);
+@font-face {
+    font-family: "NHG";
+    src: url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.eot");
+    src: url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0209bfe594ed24b75ee2aac06529e4f9.svg#Neue Haas Grotesk Display Pro 75 Bold")format("svg");
+}
+
+body {
+    font-family: NHG;
+    text-align: center;
+    color: #0073ff;
+    overflow: scroll;
+    text-overflow: visible;
+    white-space: nowrap;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    /* background-color: rgb(255, 253, 247); */
+}
+
+h1 {
+    font-size: 56px;
+    margin: 1rem;
+}
+
+nav, header{
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    display: inline-block;
+    padding: 5px;
+}
+
+nav a {
+    color: #0073ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+    border-style: solid;
+}
+
+nav a:hover {
+    background: #0073ff;
+    color: white;
+    border-style: solid;
+}
+
+iframe {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 600px;
+    min-height: fit-content;
+    height: 600px;
+    border: none;
+    overflow: visible;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+.status-bar {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 10px;
+    flex: 0 0 100px;
+    padding: 10px;
+}
+
+.content-frame {
+    flex: 1;
+    border: none;
+}
+
+.ticker {
+    text-align: center;
+    border-style: solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 4px solid #0073ff;
+    margin: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0073ff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #005ed2; 
+}
+
+.marquee {
+    font-size: 2vw;
+    color: white;
+    height: 30px;
+    overflow: hidden;
+    background-color: #0073ff;
+    position: relative;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.marquee div {
+    display: block;
+    width: 200%;
+    position: absolute; 
+    overflow: hidden;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
