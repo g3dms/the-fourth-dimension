@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: layouts/main.njk
 title: Sitemap
 ---
 

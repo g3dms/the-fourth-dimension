@@ -1,0 +1,39 @@
+---
+layout: layouts/gallery.njk
+title: "Fanart & Gifts :: Portfolio"
+---
+
+<div class="win-box" style="margin-bottom: 12px;">
+    <div class="win-titlebar" style="background: linear-gradient(90deg, #800080, #ff00aa);">
+        <span><i class="fa-solid fa-heart"></i> Fanart & Gift Hall of Fame</span>
+    </div>
+    <div style="padding: 10px;">
+        <p style="margin-bottom: 12px; font-size: 12px;">
+            Special gifts from amazing artist friends! Let me know if you want it taken down :)
+        </p>
+
+        <div class="cards-3col">
+            {% for gift in gifts %}
+            <div class="win-box">
+                <div class="art-img-box" style="aspect-ratio: 16/10;">
+                    <img src="{{ gift.image }}" alt="{{ gift.title }}" loading="lazy">
+                    <span class="year-badge-90s">{{ gift.year }} GIFT</span>
+                </div>
+                <div class="art-info-box">
+                    <div class="art-card-title">{{ gift.title }}</div>
+                    <p style="font-size: 11px; margin-top: 4px; color: #333;">
+                        {{ gift.description }}
+                    </p>
+                    <div style="margin-top: 8px; padding-top: 4px; border-top: 1px solid #a0a0a0; font-weight: bold; font-size: 11px; color: #800080;">
+                        Artist: <a href="{{ gift.artistLink }}" target="_blank" rel="noopener" style="color: var(--link-blue);">{{ gift.artist }}</a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="win-box-inset">
+                <p>No gifts found in database.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 
-layout: terrawiki-character
+layout: layouts/terrawiki-character.njk
 theme: red fleshbound
 cname: Agnes Evelyn Valentine
 full-name: Agnes Evelyn Valentine

@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: layouts/default.njk
 
 ---
 
@@ -20,21 +20,21 @@ Personal blog
 Dream journal
 
 ## Stories
-<a href="stories/list.html">My stories & OCs (SUPER UNDER CONSTRUCTION)</a>
+<a href="/home/stories/list">My stories & OCs (SUPER UNDER CONSTRUCTION)</a>
 
 ## Shrine directory
-<a href="shrines/persona/home.html">Persona 5 (SUPER UNDER CONSTRUCTION)</a>
+<a href="/home/shrines/persona/home">Persona 5 (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="shrines/deltarune/ENTER.html">Deltarune (SUPER UNDER CONSTRUCTION)</a>
+<a href="/home/shrines/deltarune/ENTER">Deltarune (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="https://all-seeing-eye.neocities.org/">Gravity Falls (my other Neocities site, on indefinite hiatus)</a>
+<a href="/home/https://all-seeing-eye.neocities.org/">Gravity Falls (my other Neocities site, on indefinite hiatus)</a>
 
-<a href="shrines/the_stanley_parable/lobby.html">The Stanley Parable (SUPER UNDER CONSTRUCTION)</a>
+<a href="/home/shrines/the_stanley_parable/lobby">The Stanley Parable (SUPER UNDER CONSTRUCTION)</a>
 
-<a href="shrines/sonic/greenhills.html">Sonic (SUPER UNDER CONSTRUCTION)</a>
+<a href="/home/shrines/sonic/greenhills">Sonic (SUPER UNDER CONSTRUCTION)</a>
 
 ## Resources & Hoards
-<a href="resources-hoards/resources.html">Resources and links</a>
+<a href="/home/resources-hoards/resources">Resources and links</a>
 
 [Font hoard](resources-hoards/fonts.html)
 

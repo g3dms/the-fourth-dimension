@@ -1,17 +1,17 @@
 ---
-layout: persona-party
+layout: layouts/persona-party.njk
 title: "I will carve my own path for myself."
 message: "I will carve my own path for myself. . . "
-background-url: 'https://files.catbox.moe/eaawi2.png'
-background-music: 'https://files.catbox.moe/znd2fm.mp3'
-first-name: Goro
-last-name: Akechi
-weakness-url: 'https://files.catbox.moe/je9kgj.gif'
-code-name: Crow
+backgroundUrl: 'https://files.catbox.moe/eaawi2.png'
+backgroundMusic: 'https://files.catbox.moe/znd2fm.mp3'
+firstName: Goro
+lastName: Akechi
+weaknessUrl: 'https://files.catbox.moe/je9kgj.gif'
+codeName: Crow
 age: 18
 height: 178 cm (5'10")
 arcana: Justice
-dialogue-boxes: 
+dialogueBoxes: 
 - https://files.catbox.moe/g0jm32.png
 - https://files.catbox.moe/qlqpx0.png
 - https://files.catbox.moe/02vea4.png

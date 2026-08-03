@@ -1,8 +1,9 @@
 ---
 
-layout: fonts
+layout: layouts/fonts.njk
 css-url: '../../assets/fonts.css'
 title: Font Hoard
+templateEngineOverride: njk
 
 ---
 
@@ -24,11 +25,11 @@ There's also a tagging system that I encourage you to use~ I might update differ
 </div>
 
 <div id="fontContainer">
-  {% assign sorted_fonts = site.data.fonts | sort: 'name' %}
+  {% set sorted_fonts = meta.fonts | sort(false, false, 'name') %}
   {% for font in sorted_fonts %}
   <div class="font-card" 
-       style="{{ font.css }}"
-       data-tags="{{ font.tags | join: ' ' }}">
+       style="{{ font.css | safe }}"
+       data-tags="{{ font.tags | join(' ') }}">
     <div class="font-name">{{ font.name }}</div>
     <div class="font-example">SPHINX OF BLACK QUARTZ, JUDGE MY VOW.</div>
     <div class="font-example">sphinx of black quartz, judge my vow.</div>

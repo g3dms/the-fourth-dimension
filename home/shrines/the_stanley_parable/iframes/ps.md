@@ -1,6 +1,6 @@
 ---
 
-layout: corp
+layout: layouts/corp.njk
 
 ---
 

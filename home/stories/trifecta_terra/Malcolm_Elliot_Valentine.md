@@ -1,6 +1,6 @@
 ---
 
-layout: terrawiki-character
+layout: layouts/terrawiki-character.njk
 theme: red fleshbound
 cname: Malcolm Elliot Valentine
 full-name: Malcolm Elliot Valentine

@@ -1,6 +1,6 @@
 ---
 
-layout: terrawiki-character
+layout: layouts/terrawiki-character.njk
 theme: blue automaton
 cname: Z1P-R
 full-name: Z1P-R (Zipper)

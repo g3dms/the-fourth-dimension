@@ -1,28 +1,45 @@
-name: Deploy to Neocities
+# .github/workflows/deploy.yml
+name: Deploy to Neocities and GitHub Pages
 
+# Run this workflow every time you push to the main branch
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
+# Prevents two concurrent deployments from running at the same time
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          ruby-version: 3.2
-          bundler-cache: true
-      
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
-      
+          node-version: lts/*
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
       - name: Deploy to Neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: true
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
           dist_dir: _site
+          neocities_supporter: false
+          cleanup: true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site

@@ -1,8 +1,8 @@
 var config = {
-    "effectEnabled": true, // Control the activation of the effect here
+    "effectEnabled": true, 
     "icons": {
         "https://files.catbox.moe/ac99ci.png": true,
-        "https://files.catbox.moe/zd2a3b.png": true, // Example: Disabled icon
+        "https://files.catbox.moe/zd2a3b.png": true, 
         "https://files.catbox.moe/8kocph.png": true,
         "https://files.catbox.moe/8vg3ul.png": true,
         "https://files.catbox.moe/kzx90s.png": true,
@@ -53,7 +53,7 @@ function heart(x, y) {
     var fx = x + rand(-40, 40);
     var fy = y + rand(-40, 40);
     var i = document.createElement("img");
-    i.src = enabledIcons[rand(0, enabledIcons.length - 1)]; // Select from enabled icons only
+    i.src = enabledIcons[rand(0, enabledIcons.length - 1)]; 
     var initialRotation = rand(config.rotation.initial.min, config.rotation.initial.max);
     var finalRotation = initialRotation + rand(config.rotation.final.min, config.rotation.final.max);
     i.style.cssText = getStyle(x, y, s, initialRotation);
@@ -73,7 +73,6 @@ function heart(x, y) {
     }, 10);
 }
 
-// Add the event listener if effectEnabled is true
 if (config.effectEnabled) {
     document.body.addEventListener("click", function(event) {
         var x = event.clientX;

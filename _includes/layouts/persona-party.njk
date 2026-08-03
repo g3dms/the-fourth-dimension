@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title | default('PERSONA') }}</title>
+  <link rel="icon" type="image/x-icon" href="{{ icon }}">
+  <link rel="stylesheet" href="{{ '/assets/shrines/persona.css' }}">
+  <style>
+    body {
+      background-image: url('{{ backgroundUrl }}');
+    }
+  </style>
+  <script src="assets/autoplay.js"></script>
+  <script type="text/javascript">
+    message = "{{ message }}";
+    function step() {
+      message = message.substr(1) + message.substr(0, 1);
+      document.title = message.substr(0, 30);
+    }
+  </script>
+</head>
+
+<body class="party" onload="setInterval(step,100)">
+    <audio loop autoplay>
+      <source src="{{ backgroundMusic }}">
+    </audio>
+    <div class="content">
+
+      <h1 class="name">
+        {{ firstName }}<br>{{ lastName }}
+      </h1>
+
+      <img id="randomImage" src="">
+      <script>
+        const images = JSON.parse(
+          `{{ dialogueBoxes | replace('"', '\\"') | replace('\n', '') }}`
+        );
+
+        // Set random image
+        if (images.length > 0) {
+          document.getElementById('randomImage').src =
+            images[Math.floor(Math.random() * images.length)];
+        }
+
+      </script>
+
+      <div class="container">
+
+
+        <h1 class="menu">Profile</h1>
+
+        <p style="text-align:left;">
+          Name: {{ firstName }} {{ lastName }}<br>
+          Code Name: {{ codeName }}<br>
+          Age: {{ age }}<br>
+          Height: {{ height }}<br>
+          Arcana: {{ arcana }}<br>
+        </p>
+
+        <img src="{{ weaknessUrl }}" style="height:10rem;width:auto;">
+
+        <h1 class="menu">Ramblings</h1>
+
+        {{ content | safe }}
+
+        <a href="../party">
+          <h1 class="menu">Back</h1>
+        </a>
+      </div>
+
+    </div>
+  </body>
+
+</html>

@@ -1,84 +1,207 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: layouts/gallery.njk
+title: "Portfolio Gallery :: Aetheria"
+pagination:
+  data: artworks
+  size: 12
+  alias: artworks
+permalink: "/home/art/gallery/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}index.html"
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>THE 4TH DIMENSION</title>
-  <link rel="icon" type="image/x-icon" href="">
-  <link rel="stylesheet" href="">
-  <style>
-    body {
-      background-image: url('');
+<!-- Navigation Toolbar & Filter Panel -->
+<div class="win-box filter-panel" style="padding: 12px; margin-bottom: 20px; background: #c0c0c0; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+    
+    <div style="flex: 1; min-width: 180px;">
+        <input type="text" id="art-search" placeholder="Search title or tag..." class="win-input" style="width: 100%; padding: 4px 6px; box-sizing: border-box;">
+    </div>
+
+     <div style="min-width: 130px;">
+        <select id="art-media-filter" class="win-select" style="width: 100%; padding: 4px;">
+            <option value="">All Media</option>
+        </select>
+    </div>
+
+    <div style="min-width: 140px;">
+        <select id="art-tag-filter" class="win-select" style="width: 100%; padding: 4px;">
+            <option value="">All Tags</option>
+        </select>
+    </div>
+
+    <div style="min-width: 110px;">
+        <select id="art-year-filter" class="win-select" style="width: 100%; padding: 4px;">
+            <option value="">All Years</option>
+        </select>
+    </div>
+
+    <button id="art-reset-btn" class="win-btn" style="padding: 4px 10px;">Reset</button>
+</div>
+
+<div id="gallery-grid" class="art-grid">
+    {% for art in artworks %}
+    <a href="/home/art/artworks/{{ art.id }}/" 
+       class="art-card-link"
+       data-title="{{ art.title | lower }}" 
+       data-tags="{{ art.tags | join(',') | lower if art.tags else '' }}"
+       data-media="{{ art.media if art.media else ''}}"
+       data-genre="{{ art.genre | lower if art.genre else '' }}" 
+       data-year="{{ art.year }}"
+       style="text-decoration: none; color: inherit;">
+        <div class="win-box art-card">
+            <div class="art-img-box">
+                <img src="{{ art.image }}" alt="{{ art.title }}" loading="lazy">
+                <span class="year-badge-90s">{{ art.year }}</span>
+            </div>
+            <div class="art-info-box">
+                <div class="art-card-title">{{ art.title }}</div>
+                <div style="display: flex; justify-content: space-between; font-size: 10px; color: #555;">
+                    <span>{{ art.genre }}</span>
+                    <span><i class="fa-regular fa-clock"></i> {{ art.hours }}</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="win-box pagination-bar" style="margin-top: 20px; padding: 10px; text-align: center; background: #c0c0c0;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 400px; margin: 0 auto;">
+        {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}" class="win-btn">
+                <i class="fa-solid fa-chevron-left"></i> Previous Page
+            </a>
+        {% else %}
+            <button class="win-btn" disabled style="opacity: 0.5; cursor: not-allowed;">
+                <i class="fa-solid fa-chevron-left"></i> Previous Page
+            </button>
+        {% endif %}
+
+        <span style="font-weight: bold; font-size: 12px;">
+            Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}
+        </span>
+
+        {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}" class="win-btn">
+                Next Page <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        {% else %}
+            <button class="win-btn" disabled style="opacity: 0.5; cursor: not-allowed;">
+                Next Page <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("art-search");
+    const mediaSelect = document.getElementById("art-media-filter");
+    const tagSelect = document.getElementById("art-tag-filter");
+    const yearSelect = document.getElementById("art-year-filter");
+    const resetBtn = document.getElementById("art-reset-btn");
+    const cards = document.querySelectorAll(".art-card-link");
+
+    console.log(`[Gallery Debug] Found ${cards.length} artwork cards.`);
+
+    if (!cards.length) {
+      console.error("[Gallery Debug] ERROR: Could not find any elements with class '.art-card-link'");
+      return;
     }
-    img {
-      height: 100px;
-      width: auto;
+
+    const mediaSet = new Set();
+    const tagsSet = new Set();
+    const yearsSet = new Set();
+
+    cards.forEach((card, index) => {
+      const media = card.getAttribute("data-media");
+      const tags = card.getAttribute("data-tags");
+      const genre = card.getAttribute("data-genre");
+      const year = card.getAttribute("data-year");
+
+      console.log(`[Card ${index + 1}] Media: "${media}", Genre: "${genre}", Tags: "${tags}", Year: "${year}"`);
+
+      if (media && media.trim() !== "") mediaSet.add(media.trim());
+      if (genre && genre.trim() !== "") tagsSet.add(genre.trim());
+      if (tags) {
+        tags.split(",").forEach(t => {
+          const cleaned = t.trim();
+          if (cleaned !== "") tagsSet.add(cleaned);
+        });
+      }
+      if (year && year.trim() !== "") yearsSet.add(year.trim());
+    });
+
+    console.log("[Gallery Debug] Unique Media found:", Array.from(mediaSet));
+
+    // Helper to safely populate dropdowns
+    function populateDropdown(selectEl, items, isNumeric = false) {
+      if (!selectEl) {
+        console.warn("[Gallery Debug] Dropdown element not found!");
+        return;
+      }
+      
+      // Preserve "All ..." option
+      const firstOpt = selectEl.options[0] ? selectEl.options[0].outerHTML : '<option value="">All</option>';
+      selectEl.innerHTML = firstOpt;
+
+      const sorted = Array.from(items).sort((a, b) => {
+        if (isNumeric) return b - a;
+        return a.localeCompare(b, undefined, { sensitivity: 'base' });
+      });
+
+      sorted.forEach(item => {
+        const opt = document.createElement("option");
+        opt.value = item;
+        opt.textContent = item; // Preserves case like TADC / PHM
+        selectEl.appendChild(opt);
+      });
     }
-  </style>
-  <script src="/assets/autoplay.js"></script>
-</head>
 
-<body>
+    populateDropdown(mediaSelect, mediaSet);
+    populateDropdown(tagSelect, tagsSet);
+    populateDropdown(yearSelect, yearsSet, true);
 
-    <audio autoplay loop>
-        <source src="">
-    </audio>
+    // Filtering logic
+    function filterGallery() {
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      const selectedMedia = mediaSelect ? mediaSelect.value.toLowerCase().trim() : "";
+      const selectedTag = tagSelect ? tagSelect.value.toLowerCase().trim() : "";
+      const selectedYear = yearSelect ? yearSelect.value.trim() : "";
 
-    <p><img src="https://files.catbox.moe/foemqn.png" alt="" /></p>
+      cards.forEach(card => {
+        const title = (card.getAttribute("data-title") || "").toLowerCase();
+        const media = (card.getAttribute("data-media") || "").toLowerCase();
+        const tags = (card.getAttribute("data-tags") || "").toLowerCase();
+        const genre = (card.getAttribute("data-genre") || "").toLowerCase();
+        const year = (card.getAttribute("data-year") || "").trim();
 
-    <p><img src="https://files.catbox.moe/oi3zcp.png" alt="" /></p>
+        const matchesQuery = !query || 
+                             title.includes(query) || 
+                             media.includes(query) || 
+                             tags.includes(query) || 
+                             genre.includes(query);
 
-    <p><img src="https://files.catbox.moe/xc3qpl.png" alt="" /></p>
+        const matchesMedia = !selectedMedia || media === selectedMedia;
+        const matchesTag = !selectedTag || genre === selectedTag || tags.split(",").map(t => t.trim().toLowerCase()).includes(selectedTag);
+        const matchesYear = !selectedYear || year === selectedYear;
 
-    <p><img src="https://files.catbox.moe/pfjzec.png" alt="" /></p>
+        card.style.display = (matchesQuery && matchesMedia && matchesTag && matchesYear) ? "" : "none";
+      });
+    }
 
-    <p><img src="https://files.catbox.moe/2bjy0g.png" alt="" /></p>
+    // Attach listeners
+    if (searchInput) searchInput.addEventListener("input", filterGallery);
+    if (mediaSelect) mediaSelect.addEventListener("change", filterGallery);
+    if (tagSelect) tagSelect.addEventListener("change", filterGallery);
+    if (yearSelect) yearSelect.addEventListener("change", filterGallery);
 
-    <p><img src="https://files.catbox.moe/qyrpex.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/hcdjvw.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/oq4app.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/tf7g2p.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/d51pt1.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/vcwb86.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/0cyj7b.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/8jap3b.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/1vx4sk.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/ep25dj.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/2ii034.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/owwjiw.jpg" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/avje7g.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/umo47b.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/wcf0lv.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/vh6fng.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/3bw53a.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/prp8l0.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/0vh9h9.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/lchde4.png" alt="" /></p>
-
-    <p><img src="https://files.catbox.moe/hlnus1.png" alt="" /></p>
-
-
-</body>
-
-</html>
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        if (searchInput) searchInput.value = "";
+        if (mediaSelect) mediaSelect.value = "";
+        if (tagSelect) tagSelect.value = "";
+        if (yearSelect) yearSelect.value = "";
+        filterGallery();
+      });
+    }
+  });
+</script>

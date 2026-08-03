@@ -1,6 +1,6 @@
 ---
-layout: main
-background-img:
+layout: layouts/main.njk
+backgroundImg:
 title:
 ---
 

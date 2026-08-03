@@ -1,0 +1,185 @@
+---
+layout: layouts/gallery.njk
+pagination:
+  data: artworks
+  size: 1
+  alias: art
+  reverse: true
+permalink: "/home/art/artworks/{{ art.id }}/index.html"
+---
+
+<div class="win-box">
+    <div class="win-titlebar" style="background: linear-gradient(90deg, #000080, #1084d0);">
+        <span><i class="fa-solid fa-image"></i> ARTWORK_VIEWER.EXE - {{ art.title }}</span>
+    </div>
+
+    <div class="win-content" style="padding: 15px;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <a href="/home/art/gallery/" class="win-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Gallery
+            </a>
+            
+            {% if art.image %}
+            <a href="{{ art.image }}" target="_blank" class="win-btn" style="color: #000080;">
+                <i class="fa-solid fa-up-right-from-square"></i> Open Full Resolution Image
+            </a>
+            {% endif %}
+        </div>
+
+        <div class="art-detail-display-box">
+            <img src="{{ art.image }}" alt="{{ art.title }}" class="art-detail-img">
+        </div>
+
+        <div class="win-inset" style="margin-top: 15px; background: transparent; border: none; padding: 0;">
+            <h2 style="margin: 0 0 10px 0; font-family: 'MS Sans Serif', Geneva, sans-serif; font-size: 18px; color: #000080; border-bottom: 2px solid #808080; padding-bottom: 5px;">
+                {{ art.title }}
+            </h2>
+
+            <table class="win-table" style="margin-bottom: 15px;">
+                <thead>
+                    <tr>
+                        <th colspan="2"><i class="fa-solid fa-info-circle"></i> File Specifications & Metadata</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 30%;"><strong><i class="fa-regular fa-calendar"></i> Year Created:</strong></td>
+                        <td>{{ art.year }}</td>
+                    </tr>
+                    {% if art.media %}
+                    <tr>
+                        <td><strong><i class="fa-solid fa-film"></i> Media:</strong></td>
+                        <td>{{ art.media }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if art.tools %}
+                    <tr>
+                        <td><strong><i class="fa-solid fa-wand-magic-sparkles"></i> Software / Tools:</strong></td>
+                        <td>{{ art.tools }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if art.medium %}
+                    <tr>
+                        <td><strong><i class="fa-solid fa-pen-nib"></i> Medium:</strong></td>
+                        <td>{{ art.medium }}</td>
+                    </tr>
+                    {% endif %}
+                    {% if art.tags %}
+                    <tr>
+                        <td><strong><i class="fa-solid fa-tags"></i> Tags:</strong></td>
+                        <td>
+                            <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                {% for tag in art.tags %}
+                                <span class="tag-badge-90s">#{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+
+            <div style="border-top: 1px dashed #808080; padding-top: 10px;">
+                <h4 style="margin: 0 0 5px 0; color: #000080;"><i class="fa-solid fa-align-left"></i> Description / Artist Notes:</h4>
+                <div style="font-size: 13px; line-height: 1.6; color: #000; white-space: pre-line; background: #fafafa; padding: 10px; border: 1px solid #c0c0c0;">
+                    {% if art.description %}
+                        {{ art.description }}
+                    {% else %}
+                        <em>No detailed description provided for this piece.</em>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+        {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}" class="win-btn">
+                <i class="fa-solid fa-chevron-left"></i> Previous
+            </a>
+        {% else %}
+            <button class="win-btn" disabled style="opacity: 0.5; cursor: not-allowed; color: #808080;">
+                <i class="fa-solid fa-chevron-left"></i> Previous
+            </button>
+        {% endif %}
+
+        {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}" class="win-btn">
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        {% else %}
+            <button class="win-btn" disabled style="opacity: 0.5; cursor: not-allowed; color: #808080;">
+                Next <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        {% endif %}
+        </div>
+
+    </div>
+</div>
+
+<style>
+.art-detail-display-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; 
+    border: none;           
+    padding: 0;                
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.art-detail-img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border: none;             
+    outline: none;
+}
+
+.win-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 12px;
+}
+
+.win-table th {
+    background: #000080;
+    color: #ffffff;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: bold;
+}
+
+.win-table td {
+    border: 1px solid #808080;
+    padding: 6px 8px;
+    color: #000;
+}
+
+.tag-badge-90s {
+    background: #e0e0e0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 2px 6px;
+    font-size: 11px;
+    color: #000;
+}
+
+.badge-allowed {
+    background: #d4edda;
+    color: #155724;
+    padding: 2px 6px;
+    border: 1px solid #c3e6cb;
+    font-weight: bold;
+    font-size: 11px;
+}
+</style>

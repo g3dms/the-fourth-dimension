@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: layouts/default.njk
 
 ---
 
@@ -48,3 +48,5 @@ In GDScript, $ returns the node at the relative path from the current node, or r
 
 21/7/2025
 Finished my first game (at 2 am lol), dodge the creeps from godot documentation
+
+## 

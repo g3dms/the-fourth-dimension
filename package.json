@@ -1,0 +1,27 @@
+{
+  "name": "the-fourth-dimension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g3dms/the-fourth-dimension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/g3dms/the-fourth-dimension/issues"
+  },
+  "homepage": "https://github.com/g3dms/the-fourth-dimension#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "markdown-it": "^14.3.0"
+  }
+}
