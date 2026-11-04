@@ -16,6 +16,6 @@ House MD
 
 Sonic
 
-The Stanley Parable
+[The Stanley Parable](/home/shrines/the_stanley_parable/lobby)
 
 [TV Girl](/home/shrines/bands/tvgirl)

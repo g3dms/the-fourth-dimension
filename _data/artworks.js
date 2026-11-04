@@ -253,7 +253,7 @@ const rawArtworks = [
   },
   {
     "id": "art-2026-06-19-00",
-    "title": "test9",
+    "title": "4 EVILS",
     "year": 2026,
     "media": "Deltarune",
     "genre": "test",
@@ -263,6 +263,103 @@ const rawArtworks = [
     "tags": ["Pixel", "Fantasy"],
     "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
   },
+  {
+    "id": "art-2026-08-22-00",
+    "title": "Prime",
+    "year": 2026,
+    "media": "Rick and Morty",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/rick%20prime",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2026-08-27-00",
+    "title": "Worry worm Jerry",
+    "year": 2026,
+    "media": "Rick and Morty",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/jer",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-09-01",
+    "title": "I'll Miss You, Partner",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/picture.png",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-04-17-00",
+    "title": "Fallen Angels Sonic Redraw",
+    "year": 2025,
+    "media": "Sonic",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/mtoo.png",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-04-19-00",
+    "title": "Girl with the Blue Headband",
+    "year": 2025,
+    "media": "Sonic",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/maria.png",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-04-20-00",
+    "title": "Go for it, Petey!",
+    "year": 2025,
+    "media": "Dogman",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/detey.png",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-07-00",
+    "title": "Select all Televisions",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/tenna.png",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-09-00",
+    "title": "Cinema Tenna",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/Untitled300_20250709185342.PNG",
+    "tags": ["Pixel", "Fantasy"],
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  
   
 ]
 

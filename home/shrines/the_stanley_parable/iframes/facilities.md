@@ -19,3 +19,13 @@ Our state-of-the-art facility features:
 | ![Fern](https://files.catbox.moe/vuimtp.jpg){: .grid-image } | ![Vending machine](https://files.catbox.moe/ey8mpw.png){: .grid-image } |
 | *Our most productive employee. Requires no breaks, just bi-weekly dusting*{: .grid-caption }          | *Now with 3 more types of existential sustenance*{: .grid-caption }          |
 
+<table>
+    <tr>
+
+        <td>
+            <img src="https://files.catbox.moe/hi76tz.jpg">
+        </td>
+    
+    </tr>
+
+</table>

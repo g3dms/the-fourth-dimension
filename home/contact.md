@@ -11,5 +11,5 @@ marquee: "I was wandering an abandoned warehouse at night. I was lost, looking f
 - Spacehey: [giujutsus](https://spacehey.com/giujutsus)
 - Instagram: [giujutsus](https://www.instagram.com/giujutsus/) or [zeros.mp4](https://www.instagram.com/zeros.mp4/)
 - Twitter: [giujutsus](https://x.com/giujutsus)
-- Websites: [Neocities](https://the-fourth-dimension.neocities.org) or [Nekoweb](https://the-fourth-dimension.nekoweb.org), if you prefer
-- Others: [Rentry](https://rentry.co/employee-427), [Carrd](https://giujutsus.carrd.co), [Strawpage](https://giujutsuss.straw.page), [Bluesky](https://bsky.app/profile/giujutsus.bsky.social)
+- Websites: [Neocities](https://the-fourth-dimension.neocities.org) or [Nekoweb (outdated)](https://the-fourth-dimension.nekoweb.org), [whatdidgiudo](https://whatdidgiudo.neocities.org), [whatdidgiulearn](https://whatdidgiulearn.vercel.app/), [the-trolley-problem](https://the-trolley-problem.neocities.org)
+- Others: [Rentry](https://rentry.co/employee-427), [Carrd](https://giujutsus.carrd.co), [Strawpage](https://giujutsus.straw.page), [Bluesky](https://bsky.app/profile/giujutsus.bsky.social)
