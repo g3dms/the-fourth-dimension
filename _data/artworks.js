@@ -359,7 +359,116 @@ const rawArtworks = [
     "tags": ["Pixel", "Fantasy"],
     "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
   },
-  
+  {
+    "id": "art-2025-11-26-00",
+    "title": "just make it exist first, you can make it good later",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/kris.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-22-00",
+    "title": "Can't Take You Off My Mind",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/crt.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-12-12-00",
+    "title": "I LOVE TV!",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/tennasit.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-11-27-00",
+    "title": "Mom I threw up on the bed again",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/opendoor.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-27-00",
+    "title": "The Show Must Go On!",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/asfasfas.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2025-07-19-00",
+    "title": "I'm the Akira Slide guy!",
+    "year": 2025,
+    "media": "Deltarune",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/2025/lancerslide.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2026-11-06-00",
+    "title": "Lighting practice with Rick Prime",
+    "year": 2026,
+    "media": "Rick and Morty",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/primeprime.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2026-11-07-00",
+    "title": "A Comic of my DND Oneshot",
+    "year": 2026,
+    "media": "D&D",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/LloydGrymmwarOneshotComic",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
+  {
+    "id": "art-2026-11-07-01",
+    "title": "Drawing of my DND character",
+    "year": 2026,
+    "media": "D&D",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/LloydGrymmwarOneshot",
+    "description": "His name is Lloyd Grymmwar!!"
+  },
+  {
+    "id": "art-2026-09-07-00",
+    "title": "Oh hey Rick",
+    "year": 2026,
+    "media": "Rick and Morty",
+    "genre": "test",
+    "medium": "Pixel Art",
+    "tools": "Clip Studio Paint",
+    "image": "https://file.garden/ZxeJbwpMpVUTaKTZ/art/rick.png",
+    "description": "Candy canes sweet roll halvah marzipan chocolate cake lollipop."
+  },
   
 ]
 
