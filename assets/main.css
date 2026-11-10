@@ -891,9 +891,6 @@ button,
     margin: 1em 0;
 }
 
-
-}
-
 @keyframes pop {
 from {
 transform:scale(0.95)
